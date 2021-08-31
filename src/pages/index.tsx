@@ -1,14 +1,16 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import * as S from "@/styles/pages/Home";
+import LoadingEllipsis from "@/components/LoadingEllipsis";
 
 const Home: NextPage = () => {
   return (
     <S.Container>
       <Head>
-        <title>Next Boilerplate</title>
+        <title>Arthur Hauenstein</title>
       </Head>
-      <h1>Olá</h1>
+      <LoadingEllipsis />
+      <h1>Em construção 👷‍♂️</h1>
     </S.Container>
   );
 };
