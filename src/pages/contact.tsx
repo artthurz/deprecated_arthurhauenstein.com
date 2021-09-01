@@ -4,7 +4,7 @@ import * as S from '@/styles/pages/Home.styles'
 import LoadingEllipsis from '@/components/LoadingEllipsis'
 import useI18N from '@/hooks/usei18n'
 
-const Home: NextPage = () => {
+const Contact: NextPage = () => {
   const i18n = useI18N()
   console.log(i18n.t('presentation'))
   return (
@@ -17,4 +17,4 @@ const Home: NextPage = () => {
     </S.Container>
   )
 }
-export default Home
+export default Contact

@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 
-import { Loading } from "./styles";
+import { Loading } from './styles'
 
-const LoadingEllipsis = () => {
+const LoadingEllipsis = (): JSX.Element => {
   return (
     <Loading className="ellipsis">
       <div></div>
@@ -10,7 +10,7 @@ const LoadingEllipsis = () => {
       <div></div>
       <div></div>
     </Loading>
-  );
-};
+  )
+}
 
-export default LoadingEllipsis;
+export default LoadingEllipsis

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Loading = styled.div`
   display: inline-block;
@@ -57,4 +57,4 @@ export const Loading = styled.div`
       transform: translate(24px, 0);
     }
   }
-`;
+`

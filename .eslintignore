@@ -1,3 +1,12 @@
 node_modules
+.vscode
+coverage
+public
+*.json
+dist
 .next
-/*.js
+*.svg
+*.css
+*.mdx
+*.tsx.snap
+*.ts.snap

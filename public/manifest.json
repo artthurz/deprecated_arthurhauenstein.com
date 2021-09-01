@@ -1,0 +1,15 @@
+{
+  "name": "Arthur Hauenstein - Personal Page",
+  "short_name": "Arthur Hauenstein",
+  "description": "Minha página pessoal onde postarei meu portifólio e atualizações sobre mim.",
+  "icons": [
+    {
+      "src": "/img/icon.svg",
+      "sizes": "any"
+    }
+  ],
+  "background_color": "#1F1F24",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#28F5BE"
+}
