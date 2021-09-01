@@ -69,6 +69,7 @@ export const MenuGroup = styled.div`
   align-items: center;
   justify-content: center;
   flex: 1;
+  margin-right: 7rem;
 
   ${({ theme }) => css`
     ${MenuLink} {

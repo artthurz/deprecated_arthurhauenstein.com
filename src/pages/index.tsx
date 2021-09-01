@@ -6,7 +6,6 @@ import useI18N from '@/hooks/usei18n'
 
 const Home: NextPage = () => {
   const i18n = useI18N()
-  console.log(i18n.t('presentation'))
   return (
     <S.Container>
       <Head>
