@@ -8,6 +8,7 @@ import * as S from '@/styles/pages/_app.styles'
 import GlobalStyles from '../styles/global'
 import theme from '../styles/theme'
 import { Menu } from '@/components/Menu'
+import { Footer } from '@/components/Footer'
 import I18NProvider from '@/i18n/context/I18NProvider'
 
 function App({ Component, pageProps }: AppProps): JSX.Element {
@@ -32,11 +33,11 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
           <link rel="shortcut icon" href="/img/icon.svg" />
           <link rel="apple-touch-icon" href="/img/icon.svg" />
           <link rel="manifest" href="/manifest.json" />
-          <link rel="stylesheet" href="/css/  .css" />
+          <link rel="stylesheet" href="/css/aos.css" />
           <link
             rel="alternate"
-            hrefLang="en"
-            href="https://arthurhauenstein.com/en"
+            hrefLang="pt"
+            href="https://arthurhauenstein.com/pt"
           />
           <link
             rel="alternate"
@@ -52,6 +53,7 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
               <Component {...pageProps} />
             </S.Main>
           </S.Container>
+          <Footer />
         </S.Wrapper>
       </ThemeProvider>
     </I18NProvider>

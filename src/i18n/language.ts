@@ -1,11 +1,11 @@
 export enum Language {
-  'pt' = 'pt',
   'en' = 'en',
+  'pt' = 'pt',
   'es' = 'es'
 }
 
 export enum LanguageResource {
-  'pt' = 'Português',
   'en' = 'English',
+  'pt' = 'Português',
   'es' = 'Español'
 }

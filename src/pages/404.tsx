@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
+import Head from 'next/head'
 
-import * as S from '@/styles/pages/404.styles'
+import * as S from '@/styles/pages/NotFound.styles'
 import { Space } from '@/components/Space'
 import { Button } from '@/components/Button'
 import { useRouter } from 'next/router'
@@ -16,6 +17,9 @@ const NotFound: NextPage = () => {
 
   return (
     <S.Wrapper>
+      <Head>
+        <title>404 | Arthur Hauenstein</title>
+      </Head>
       <Space stars={30}>
         <S.Title>404!</S.Title>
         <S.Subtitle>{i18n.t('not_found_message')}</S.Subtitle>

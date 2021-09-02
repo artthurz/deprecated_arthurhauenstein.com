@@ -8,7 +8,7 @@ export default {
   },
   font: {
     family:
-      "Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Poppins, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+      "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
     light: 300,
     normal: 400,
     medium: 700,
@@ -38,6 +38,7 @@ export default {
     purple: '#6321CE',
     pink: '#FF3773',
     blue: '#3B37FF',
+    green: '#1BE0AB',
     gradient01:
       'linear-gradient(270.03deg, #3B37FF 0.05%, rgba(59, 55, 255, 0) 98.15%)',
     gradient02:
