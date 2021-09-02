@@ -10,7 +10,7 @@ const messages: MessageFile = {
     fullstack: 'Fullstack Engineer',
     presentation: 'Olá, eu sou Arthur',
     presentation_description:
-      'Um desenvolvedor apaixonado pela tecnologia web e amante de conceitos de UI design!',
+      'Um desenvolvedor que é entusiasta por novas tecnologia, apaixonado pelo ecosistema Javascript e conceitos de UI design!',
     years_experience: 'anos de experiência',
     projects_developed: 'projetos desenvolvidos',
     completed_courses: 'Courses concluídos',
@@ -76,7 +76,7 @@ const messages: MessageFile = {
     fullstack: 'Fullstack Engineer',
     presentation: "Hi, i'm Arthur",
     presentation_description:
-      'A developer passionate about web technology and a lover of UI design concepts!',
+      'A developer who is enthusiastic about new technology, passionate about Javascript ecosystem and UI design concepts!',
     years_experience: 'years of experience',
     projects_developed: 'projects developed',
     completed_courses: 'completed courses',
@@ -143,7 +143,7 @@ const messages: MessageFile = {
     fullstack: 'Ingeniero Fullstack',
     presentation: 'Hola, soy Arthur',
     presentation_description:
-      'Un desarrollador apasionado por la tecnología web y amante de los conceptos de diseño de UI',
+      '¡Un desarrollador entusiasmado con las nuevas tecnologías, apasionado por el ecosistema Javascript y los conceptos de diseño de UI!',
     years_experience: 'años de experiencia',
     projects_developed: 'proyectos desarrollados',
     completed_courses: 'Courses completados',
