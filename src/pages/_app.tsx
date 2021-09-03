@@ -27,7 +27,7 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
           />
           <meta
             name="description"
-            content="Minha página pessoal onde postarei meu portifólio e atualizações sobre mim."
+            content="This is my personal page, where I will update my portfolio and bring news about myself."
           />
           <title>Arthur Hauenstein</title>
           <link rel="shortcut icon" href="/img/icon.svg" />

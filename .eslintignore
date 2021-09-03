@@ -10,3 +10,4 @@ dist
 *.mdx
 *.tsx.snap
 *.ts.snap
+next.config.js

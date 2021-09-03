@@ -13,6 +13,14 @@ import { MediaMatch } from '@/components/MediaMatch'
 import useI18N from '@/hooks/usei18n'
 import { i18n } from '@/i18n/protocols'
 
+import ReactNativeIcon from '../../public/img/technologies/reactnative.svg'
+import ReactIcon from '../../public/img/technologies/react.svg'
+import NodeIcon from '../../public/img/technologies/node.svg'
+import TypescriptIcon from '../../public/img/technologies/typescript.svg'
+import MongoDBIcon from '../../public/img/technologies/mongo.svg'
+import DockerIcon from '../../public/img/technologies/docker.svg'
+import PostgreSQLIcon from '../../public/img/technologies/postgresql.svg'
+
 const achievements = (i18n: i18n): Achievement[] => [
   {
     date: new Date('2021-08-07T00:00:00'),
@@ -90,60 +98,27 @@ const achievements = (i18n: i18n): Achievement[] => [
 ]
 
 const technologies: React.ReactNode[] = [
-  <Card
-    key="react"
-    image="/img/technology/react.png"
-    alt="React"
-    shadowColor="#61D9FA"
-  />,
-  <Card
-    key="node"
-    image="/img/technology/nodejs.png"
-    alt="Node JS"
-    shadowColor="#408F3B"
-  />,
-  <Card
-    key="reactnative"
-    image="/img/technology/reactnative.png"
-    alt="React Native"
-    shadowColor="#9261FB"
-  />,
-  <Card
-    key="java"
-    image="/img/technology/java.png"
-    alt="Java"
-    shadowColor="#EE292D"
-  />,
-  <Card
-    key="typescript"
-    image="/img/technology/typescript.png"
-    alt="Typescript"
-    shadowColor="#01ADD7"
-  />,
-  <Card
-    key="mongo"
-    image="/img/technology/mongo.png"
-    alt="Mongo DB"
-    shadowColor="#419842"
-  />,
-  <Card
-    key="aws"
-    image="/img/technology/aws.png"
-    alt="AWS"
-    shadowColor="#FD9A03"
-  />,
-  <Card
-    key="docker"
-    image="/img/technology/docker.png"
-    alt="Docker"
-    shadowColor="#099CEC"
-  />,
-  <Card
-    key="postgresql"
-    image="/img/technology/postgresql.png"
-    alt="Postgres SQL"
-    shadowColor="#2D6294"
-  />
+  <Card key="react" shadowColor="#61D9FA">
+    <ReactIcon height={120} width={120} alt="React" />
+  </Card>,
+  <Card key="node" shadowColor="#408F3B">
+    <NodeIcon height={120} width={120} alt="Node JS" />
+  </Card>,
+  <Card key="reactnative" shadowColor="#9261FB">
+    <ReactNativeIcon height={120} width={120} alt="React Native" />
+  </Card>,
+  <Card key="typescript" shadowColor="#01ADD7">
+    <TypescriptIcon height={90} width={90} alt="Typescript" />
+  </Card>,
+  <Card key="mongo" shadowColor="#419842">
+    <MongoDBIcon height={120} width={120} alt="Mongo DB" />
+  </Card>,
+  <Card key="docker" shadowColor="#ffffff">
+    <DockerIcon height={120} width={120} alt="Docker" />
+  </Card>,
+  <Card key="postgresql" shadowColor="#2D6294">
+    <PostgreSQLIcon height={90} width={90} alt="PostgreSQL" />
+  </Card>
 ]
 
 const Home: NextPage = () => {

@@ -8,7 +8,7 @@ const imageModifiers = {
   `,
   large: () => css`
     grid-gap: 5rem;
-    grid-template-areas: '1 2 3';
+    grid-template-areas: '1 2 3 4';
   `
 }
 

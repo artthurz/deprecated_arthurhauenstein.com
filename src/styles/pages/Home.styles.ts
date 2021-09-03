@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
       'aboutMe aboutMe'
       'stack stack'
       'testimonial testimonial';
-    grid-template-rows: auto auto auto 100rem auto;
+    grid-template-rows: auto auto auto 60rem auto;
 
     ${media.lessThan('medium')`
       grid-template-areas: "info" "media" "highlight" "aboutMe" "stack" "testimonial";

@@ -2,12 +2,11 @@ import { useEffect, useRef, useState } from 'react'
 import * as S from './Card.styles'
 
 export type CardProps = {
-  image: string
-  alt: string
+  children: React.ReactNode
   shadowColor: string
 }
 
-const Card = ({ image, alt, shadowColor, ...props }: CardProps) => {
+const Card = ({ children, shadowColor, ...props }: CardProps) => {
   const wrapperRef = useRef<HTMLDivElement>(null)
   const [cardPerspective, setCardPerspective] = useState({})
 
@@ -46,7 +45,7 @@ const Card = ({ image, alt, shadowColor, ...props }: CardProps) => {
 
   return (
     <S.Wrapper ref={wrapperRef} style={cardPerspective} {...props}>
-      <S.Image src={image} alt={alt} height={120} width={120} />
+      {children}
     </S.Wrapper>
   )
 }
