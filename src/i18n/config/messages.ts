@@ -65,7 +65,8 @@ const messages: MessageFile = {
     about_me_history_3:
       'Atualmente trabalho como Engenheiro Frontend para a Consultoria CBYK, alocado no Banco Crefisa de São Paulo/SP, atuando no squad de Canais Digitais desenvolvendo o Internet Banking em React e o aplicativo Crefisa Mais em React Native. Focado em projetos, já atuei desenvolvendo o PIX, Saque Digital e Push Notifications.',
     arthur_front_alt: 'Minha foto olhando para a frente',
-    in_construction: 'Esta página está em construção!'
+    in_construction: 'Esta página está em construção!',
+    my_stack: 'Tecnologias com que trabalho'
   },
   en: {
     home: 'Home',
@@ -132,7 +133,8 @@ const messages: MessageFile = {
     about_me_history_3:
       'I currently work as a Frontend Engineer for CBYK Consulting, allocated at Crefisa Bank of São Paulo/SP, working in the Digital Channels squad developing Internet Banking in React and the Crefisa Mais application in React Native. Focused on projects, I have worked on PIX, Digital Withdraw and Push Notifications.',
     arthur_front_alt: 'My photo facing forward',
-    in_construction: 'This page is under construction!'
+    in_construction: 'This page is under construction!',
+    my_stack: 'Technologies I work with'
   },
   es: {
     home: 'Home',
@@ -199,7 +201,8 @@ const messages: MessageFile = {
     about_me_history_3:
       'Actualmente trabajo como Ingeniero Frontend para CBYK Consulting, adscrito en Crefisa Bank de São Paulo / SP, trabajando en el equipo de Canales Digitales desarrollando Banca por Internet en React y la aplicación Crefisa Mais en React Native. Enfocado a proyectos, he trabajado en PIX, Digital Withdraw y Push Notifications.',
     arthur_front_alt: 'Mi foto mirando hacia adelante',
-    in_construction: '¡Esta página esta en construcción!'
+    in_construction: '¡Esta página esta en construcción!',
+    my_stack: 'Tecnologías con las que trabajo'
   }
 } as const
 

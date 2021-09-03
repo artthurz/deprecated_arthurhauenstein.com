@@ -46,23 +46,6 @@ export const MediaGroup = styled.section`
   `}
 `
 
-type ShapeProps = {
-  x: string
-  y: string
-  height: string
-  width: string
-}
-
-export const Shape = styled.div<ShapeProps>`
-  ${({ x, y, height, width }) => css`
-    position: absolute;
-    top: ${y};
-    left: ${x};
-    height: ${height};
-    width: ${width};
-  `}
-`
-
 export const Job = styled.h4`
   ${({ theme }) => css`
     color: ${theme.colors.primary};
@@ -171,7 +154,7 @@ export const HistoryWrapper = styled.div`
 export const History = styled.article`
   ${({ theme }) => css`
     padding: ${theme.spacings.medium};
-    background: ${theme.colors.black02};
+    background: ${theme.colors.background02};
     border-radius: ${theme.border.radius};
 
     ${media.lessThan('small')`
@@ -216,15 +199,12 @@ export const Stack = styled.section`
   `}
 `
 
-export const StackPlanetWrapper = styled.div`
+export const ShelfWrapper = styled.div`
   ${({ theme }) => css`
     margin: ${theme.spacings.xxlarge} 0;
     display: flex;
     justify-content: center;
-
-    &:not(.aos-animate) * {
-      animation: none !important;
-    }
+    align-items: center;
   `}
 `
 

@@ -11,7 +11,7 @@ export const Wrapper = styled.menu`
     position: sticky;
     top: 0px;
     width: 100%;
-    background: ${theme.colors.black};
+    background: ${theme.colors.background};
     z-index: ${theme.layers.alwaysOnTop};
     padding: ${theme.spacings.small} ${theme.spacings.medium};
 
@@ -101,7 +101,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
     flex-direction: column;
     justify-content: space-between;
     position: absolute;
-    background: ${theme.colors.black};
+    background: ${theme.colors.background};
     top: 0;
     left: 0;
     bottom: 0;

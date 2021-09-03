@@ -11,7 +11,7 @@ export const Ellipse = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%2328F5BEFF' stroke-width='2' stroke-dasharray='8' stroke-dashoffset='71' stroke-linecap='butt'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%231bb3e0' stroke-width='2' stroke-dasharray='8' stroke-dashoffset='71' stroke-linecap='butt'/%3e%3c/svg%3e");
     border-radius: 100px;
     width: 8rem;
     height: 8rem;

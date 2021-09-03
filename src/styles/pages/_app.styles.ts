@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
-    background: ${theme.colors.black};
+    background: ${theme.colors.background};
     align-items: center;
     min-height: 100vh;
   `}

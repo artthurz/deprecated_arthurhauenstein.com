@@ -24,7 +24,8 @@ export default {
     }
   },
   colors: {
-    background: '#121214',
+    background: '#1F1F24',
+    background02: '#35353D',
     text: '#e1e1e6',
     red: '#D92E3F',
     primary: '#1bb3e0',

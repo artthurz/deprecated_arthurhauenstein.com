@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.footer`
   ${({ theme }) => css`
-    background: ${theme.colors.black02};
+    background: ${theme.colors.background02};
     display: flex;
     justify-content: space-between;
     align-items: center;

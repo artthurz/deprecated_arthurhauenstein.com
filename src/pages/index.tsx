@@ -5,7 +5,10 @@ import * as S from '@/styles/pages/Home.styles'
 import * as Animations from '@/styles/animations'
 import { HighlightBox } from '@/components/HighlightBox'
 import { Heading } from '@/components/Heading'
+import { Card } from '@/components/Card'
+import { CardShelf } from '@/components/CardShelf'
 import { Achievement, Timeline } from '@/components/Timeline'
+import { Space } from '@/components/Space'
 import { MediaMatch } from '@/components/MediaMatch'
 import useI18N from '@/hooks/usei18n'
 import { i18n } from '@/i18n/protocols'
@@ -84,6 +87,63 @@ const achievements = (i18n: i18n): Achievement[] => [
     description: i18n.t('graduation_software_engineering_description'),
     tag: 'academic'
   }
+]
+
+const technologies: React.ReactNode[] = [
+  <Card
+    key="react"
+    image="/img/technology/react.png"
+    alt="React"
+    shadowColor="#61D9FA"
+  />,
+  <Card
+    key="node"
+    image="/img/technology/nodejs.png"
+    alt="Node JS"
+    shadowColor="#408F3B"
+  />,
+  <Card
+    key="reactnative"
+    image="/img/technology/reactnative.png"
+    alt="React Native"
+    shadowColor="#9261FB"
+  />,
+  <Card
+    key="java"
+    image="/img/technology/java.png"
+    alt="Java"
+    shadowColor="#EE292D"
+  />,
+  <Card
+    key="typescript"
+    image="/img/technology/typescript.png"
+    alt="Typescript"
+    shadowColor="#01ADD7"
+  />,
+  <Card
+    key="mongo"
+    image="/img/technology/mongo.png"
+    alt="Mongo DB"
+    shadowColor="#419842"
+  />,
+  <Card
+    key="aws"
+    image="/img/technology/aws.png"
+    alt="AWS"
+    shadowColor="#FD9A03"
+  />,
+  <Card
+    key="docker"
+    image="/img/technology/docker.png"
+    alt="Docker"
+    shadowColor="#099CEC"
+  />,
+  <Card
+    key="postgresql"
+    image="/img/technology/postgresql.png"
+    alt="Postgres SQL"
+    shadowColor="#2D6294"
+  />
 ]
 
 const Home: NextPage = () => {
@@ -179,6 +239,17 @@ const Home: NextPage = () => {
           </MediaMatch>
         </S.AboutMeContentWrapper>
       </S.AboutMe>
+
+      <S.Stack>
+        <Heading data-aos="slide-right" {...Animations.baseAosAnimation}>
+          {i18n.t('my_stack')}
+        </Heading>
+        <Space stars={20}>
+          <S.ShelfWrapper data-aos="fade-up" {...Animations.baseAosAnimation}>
+            <CardShelf cards={technologies} />
+          </S.ShelfWrapper>
+        </Space>
+      </S.Stack>
     </S.Wrapper>
   )
 }

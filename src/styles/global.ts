@@ -20,7 +20,7 @@ export default createGlobalStyle`
       -moz-osx-font-smoothing: grayscale;
       font-family: ${theme.font.family};
 
-      scrollbar-color: ${theme.colors.primary} ${theme.colors.black02};
+      scrollbar-color: ${theme.colors.primary} ${theme.colors.background02};
       scrollbar-width: 10px;
 
       /* width */
@@ -30,7 +30,7 @@ export default createGlobalStyle`
 
       /* Track */
       ::-webkit-scrollbar-track {
-        background: ${theme.colors.black02};
+        background: ${theme.colors.background02};
       }
 
       /* Handle */

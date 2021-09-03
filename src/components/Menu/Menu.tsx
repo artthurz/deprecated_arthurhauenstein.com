@@ -11,7 +11,7 @@ import useI18N from '@/hooks/usei18n'
 import { Select } from '@/components/Select'
 import { Language, LanguageResource } from '@/i18n/language'
 
-const Menu = (): JSX.Element => {
+const Menu = () => {
   const [isOpen, setIsOpen] = useState(false)
   const i18n = useI18N()
   const { pathname, push, locale } = useRouter()
