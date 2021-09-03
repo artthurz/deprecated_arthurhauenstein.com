@@ -108,7 +108,7 @@ const technologies: React.ReactNode[] = [
     <ReactNativeIcon height={90} width={90} alt="React Native" />
   </Card>,
   <Card key="typescript" shadowColor="#01ADD7">
-    <TypescriptIcon height={60} alt="Typescript" />
+    <TypescriptIcon height={60} width={60} alt="Typescript" />
   </Card>,
   <Card key="mongo" shadowColor="#419842">
     <MongoDBIcon height={90} width={90} alt="Mongo DB" />
@@ -117,7 +117,7 @@ const technologies: React.ReactNode[] = [
     <DockerIcon height={90} width={90} alt="Docker" />
   </Card>,
   <Card key="postgresql" shadowColor="#2D6294">
-    <PostgreSQLIcon width={60} alt="PostgreSQL" />
+    <PostgreSQLIcon height={60} width={60} alt="PostgreSQL" />
   </Card>
 ]
 
