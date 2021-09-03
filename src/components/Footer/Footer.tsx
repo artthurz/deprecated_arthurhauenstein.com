@@ -12,7 +12,7 @@ const Footer = () => (
     <S.IconGroup>
       <S.IconWrapper
         as="a"
-        href="mailto:arthurhauenstein@universo.univates.br"
+        href="mailto:arthur.hauenstein@universo.univates.br"
         target="__blank"
         aria-label="Email"
       >
