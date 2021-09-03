@@ -1,7 +1,7 @@
 {
-  "name": "Arthur Hauenstein - Personal Page",
+  "name": "Arthur Hauenstein - Fullstack Engineer",
   "short_name": "Arthur Hauenstein",
-  "description": "Fullstack Engineer, this is my personal page, where I will update my portfolio and bring news about myself.",
+  "description": "This is my personal page, where I will update my portfolio and bring news about myself.",
   "icons": [
     {
       "src": "/img/icon.svg",

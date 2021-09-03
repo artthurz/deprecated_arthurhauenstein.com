@@ -13,7 +13,7 @@ const messages: MessageFile = {
       'Um desenvolvedor que é entusiasta por novas tecnologias, apaixonado pelo ecosistema Javascript e conceitos de UI design!',
     years_experience: 'anos de experiência',
     projects_developed: 'projetos desenvolvidos',
-    completed_courses: 'Courses concluídos',
+    completed_courses: 'cursos concluídos',
     about_me: 'Sobre mim',
     not_found_message:
       'Opss, parece que a página que você tentou acessar não existe!',
