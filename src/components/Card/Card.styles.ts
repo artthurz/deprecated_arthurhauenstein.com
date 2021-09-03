@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.white};
     font-weight: ${theme.font.bold};
-    background-color: ${theme.colors.white};
+    background-color: ${theme.colors.background};
     border-radius: 20px;
     padding: ${theme.spacings.xxsmall};
     display: flex;
