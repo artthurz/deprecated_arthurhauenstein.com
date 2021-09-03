@@ -6,6 +6,10 @@ const imageModifiers = {
     grid-gap: 3rem;
     grid-template-areas: '1 2';
   `,
+  medium: () => css`
+    grid-gap: 4rem;
+    grid-template-areas: '1 2 3';
+  `,
   large: () => css`
     grid-gap: 5rem;
     grid-template-areas: '1 2 3 4';
@@ -27,5 +31,9 @@ export const Wrapper = styled.div`
 
   ${media.lessThan('medium')`
       ${imageModifiers.small()};
+  `};
+
+  ${media.between('medium', 'large')`
+      ${imageModifiers.medium()};
   `};
 `
