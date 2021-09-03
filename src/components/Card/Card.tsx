@@ -14,7 +14,7 @@ const Card = ({ children, shadowColor, ...props }: CardProps) => {
     wrapperRef.current?.addEventListener('mousemove', handleMouseMovement)
     wrapperRef.current?.addEventListener('mouseout', () => {
       setCardPerspective({
-        transform: 'perspective(2000px) scale(1) rotateX(0) rotateY(0)'
+        transform: 'scale(1) rotateX(0) rotateY(0)'
       })
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -32,12 +32,22 @@ const Card = ({ children, shadowColor, ...props }: CardProps) => {
 
     const newStyle = {
       transform:
-        `perspective(500px) scale(1.1) rotateX(` +
+        `scale(1.1) rotateX(` +
         xRotation +
         `deg) rotateY(` +
         yRotation +
         `deg)`,
-      boxShadow: -yRotation + `px ` + xRotation + `px 20px ` + shadowColor
+      boxShadow:
+        -yRotation +
+        `px ` +
+        xRotation +
+        `px 10px ` +
+        shadowColor +
+        `, inset ` +
+        -yRotation +
+        `px ` +
+        xRotation +
+        `px 40px rgba(255, 255, 255, 0.2)`
     }
 
     setCardPerspective(newStyle)
