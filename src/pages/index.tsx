@@ -99,25 +99,25 @@ const achievements = (i18n: i18n): Achievement[] => [
 
 const technologies: React.ReactNode[] = [
   <Card key="react" shadowColor="#61D9FA">
-    <ReactIcon height={120} width={120} alt="React" />
+    <ReactIcon height={90} width={90} alt="React" />
   </Card>,
   <Card key="node" shadowColor="#408F3B">
-    <NodeIcon height={120} width={120} alt="Node JS" />
+    <NodeIcon height={90} width={90} alt="Node JS" />
   </Card>,
   <Card key="reactnative" shadowColor="#9261FB">
-    <ReactNativeIcon height={120} width={120} alt="React Native" />
+    <ReactNativeIcon height={90} width={90} alt="React Native" />
   </Card>,
   <Card key="typescript" shadowColor="#01ADD7">
-    <TypescriptIcon height={90} width={90} alt="Typescript" />
+    <TypescriptIcon height={60} alt="Typescript" />
   </Card>,
   <Card key="mongo" shadowColor="#419842">
-    <MongoDBIcon height={120} width={120} alt="Mongo DB" />
+    <MongoDBIcon height={90} width={90} alt="Mongo DB" />
   </Card>,
   <Card key="docker" shadowColor="#ffffff">
-    <DockerIcon height={120} width={120} alt="Docker" />
+    <DockerIcon height={90} width={90} alt="Docker" />
   </Card>,
   <Card key="postgresql" shadowColor="#2D6294">
-    <PostgreSQLIcon height={90} width={90} alt="PostgreSQL" />
+    <PostgreSQLIcon width={60} alt="PostgreSQL" />
   </Card>
 ]
 
@@ -216,11 +216,19 @@ const Home: NextPage = () => {
       </S.AboutMe>
 
       <S.Stack>
-        <Heading data-aos="slide-right" {...Animations.baseAosAnimation}>
+        <Heading
+          data-aos="slide-right"
+          data-aos-offset="10"
+          {...Animations.baseAosAnimation}
+          data-aos-duration="1000"
+        >
           {i18n.t('my_stack')}
         </Heading>
         <Space stars={20}>
-          <S.ShelfWrapper data-aos="fade-up" {...Animations.baseAosAnimation}>
+          <S.ShelfWrapper
+            data-aos="zoom-in-left"
+            {...Animations.baseAosAnimation}
+          >
             <CardShelf cards={technologies} />
           </S.ShelfWrapper>
         </Space>

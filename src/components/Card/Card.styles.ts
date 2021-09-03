@@ -25,6 +25,8 @@ export const Wrapper = styled.div`
     }
     ${media.lessThan('medium')`
       padding: 0.4rem;
+      width: 15rem;
+      height: 10rem;
     `};
   `}
 `
