@@ -111,7 +111,6 @@ export const IntroductionSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 98px);
 `
 
 export const IntroductionSectionDelimiter = styled.div`
@@ -124,11 +123,13 @@ export const IntroductionSectionDelimiter = styled.div`
       'highlight media';
     grid-template-rows: auto auto;
     padding: ${theme.spacings.medium} ${theme.spacings.medium};
+    height: calc(100vh - 97px);
 
     ${media.lessThan('medium')`
       padding: ${theme.spacings.xsmall} ${theme.spacings.xsmall};
       grid-template-areas: "info" "media" "highlight";
       grid-template-columns: 1fr;
+      height: auto;
     `};
   `}
 `
