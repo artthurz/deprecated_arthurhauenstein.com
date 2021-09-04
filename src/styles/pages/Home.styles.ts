@@ -22,7 +22,6 @@ export const MediaGroup = styled.div`
   grid-area: media;
   justify-self: center;
   position: relative;
-  height: calc(100vh - 98px);
 
   ${media.lessThan('medium')`
     width: 20em;
