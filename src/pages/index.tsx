@@ -128,111 +128,122 @@ const Home: NextPage = () => {
       <Head>
         <title>Arthur Hauenstein</title>
       </Head>
+      <S.IntroductionSection>
+        <S.IntroductionSectionDelimiter>
+          <S.InfoGroup>
+            <S.Job data-aos="slide-right" {...Animations.baseAosAnimation}>
+              {i18n.t('fullstack')}
+            </S.Job>
+            <S.PresentationWrapper>
+              <S.Presentation>{i18n.t('presentation')}</S.Presentation>
+            </S.PresentationWrapper>
+            <S.Description data-aos="fade-up" {...Animations.baseAosAnimation}>
+              {i18n.t('presentation_description')}
+            </S.Description>
+          </S.InfoGroup>
 
-      <S.InfoGroup>
-        <S.Job data-aos="slide-right" {...Animations.baseAosAnimation}>
-          {i18n.t('fullstack')}
-        </S.Job>
-        <S.PresentationWrapper>
-          <S.Presentation>{i18n.t('presentation')}</S.Presentation>
-        </S.PresentationWrapper>
-        <S.Description data-aos="fade-up" {...Animations.baseAosAnimation}>
-          {i18n.t('presentation_description')}
-        </S.Description>
-      </S.InfoGroup>
+          <S.HighlightGroup>
+            <HighlightBox
+              primaryText="+5"
+              secondaryText={i18n.t('years_experience')}
+            />
+            <HighlightBox
+              primaryText="5"
+              secondaryText={i18n.t('completed_courses')}
+            />
+            <HighlightBox
+              primaryText="+10"
+              secondaryText={i18n.t('projects_developed')}
+            />
+          </S.HighlightGroup>
 
-      <S.HighlightGroup>
-        <HighlightBox
-          primaryText="+5"
-          secondaryText={i18n.t('years_experience')}
-        />
-        <HighlightBox
-          primaryText="5"
-          secondaryText={i18n.t('completed_courses')}
-        />
-        <HighlightBox
-          primaryText="+10"
-          secondaryText={i18n.t('projects_developed')}
-        />
-      </S.HighlightGroup>
-
-      <S.MediaGroup
-        data-aos="fade-up"
-        data-aos-offset="50"
-        {...Animations.baseAosAnimation}
-      >
-        <S.Photo
-          src="/img/me/arthur_front.png"
-          alt={i18n.t('arthur_front_alt')}
-          width={521}
-          height={694}
-        />
-      </S.MediaGroup>
-
-      <S.AboutMe>
-        <Heading
-          data-aos="slide-right"
-          data-aos-offset="10"
-          {...Animations.baseAosAnimation}
-          data-aos-duration="1000"
-        >
-          {i18n.t('about_me')}
-        </Heading>
-        <S.AboutMeContentWrapper>
-          <S.HistoryWrapper>
-            <S.History>
-              <S.Paragraph
-                data-aos="slide-right"
-                {...Animations.baseAosAnimation}
-              >
-                {i18n.t('about_me_history_1')}
-              </S.Paragraph>
-
-              <S.Paragraph
-                data-aos="slide-right"
-                {...Animations.baseAosAnimation}
-              >
-                {i18n.t('about_me_history_2')}
-              </S.Paragraph>
-
-              <S.Paragraph
-                data-aos="slide-right"
-                {...Animations.baseAosAnimation}
-              >
-                {i18n.t('about_me_history_3')}
-              </S.Paragraph>
-            </S.History>
-          </S.HistoryWrapper>
-          <MediaMatch display="flex" greaterThan="medium">
-            <S.TimelineWrapper>
-              <Timeline
-                data-aos="zoom-in-left"
-                {...Animations.baseAosAnimation}
-                achievements={achievements(i18n)}
-              />
-            </S.TimelineWrapper>
-          </MediaMatch>
-        </S.AboutMeContentWrapper>
-      </S.AboutMe>
-
-      <S.Stack>
-        <Heading
-          data-aos="slide-right"
-          data-aos-offset="10"
-          {...Animations.baseAosAnimation}
-          data-aos-duration="1000"
-        >
-          {i18n.t('my_stack')}
-        </Heading>
-        <Space stars={20}>
-          <S.ShelfWrapper
-            data-aos="zoom-in-left"
+          <S.MediaGroup
+            data-aos="fade-up"
+            data-aos-offset="50"
             {...Animations.baseAosAnimation}
           >
-            <CardShelf cards={technologies} />
-          </S.ShelfWrapper>
-        </Space>
-      </S.Stack>
+            <S.Photo
+              src="/img/me/arthur_front.png"
+              alt={i18n.t('arthur_front_alt')}
+              width={521}
+              height={694}
+            />
+          </S.MediaGroup>
+        </S.IntroductionSectionDelimiter>
+      </S.IntroductionSection>
+
+      <S.AboutMeSection>
+        <S.AboutMeSectionDelimiter>
+          <S.AboutMe>
+            <Heading
+              data-aos="slide-right"
+              data-aos-offset="10"
+              {...Animations.baseAosAnimation}
+              data-aos-duration="1000"
+            >
+              {i18n.t('about_me')}
+            </Heading>
+            <S.AboutMeContentWrapper>
+              <S.HistoryWrapper>
+                <S.History>
+                  <S.Paragraph
+                    data-aos="slide-right"
+                    {...Animations.baseAosAnimation}
+                  >
+                    {i18n.t('about_me_history_1')}
+                  </S.Paragraph>
+
+                  <S.Paragraph
+                    data-aos="slide-right"
+                    {...Animations.baseAosAnimation}
+                  >
+                    {i18n.t('about_me_history_2')}
+                  </S.Paragraph>
+
+                  <S.Paragraph
+                    data-aos="slide-right"
+                    {...Animations.baseAosAnimation}
+                  >
+                    {i18n.t('about_me_history_3')}
+                  </S.Paragraph>
+                </S.History>
+              </S.HistoryWrapper>
+              <MediaMatch display="flex" greaterThan="medium">
+                <S.TimelineWrapper>
+                  <Timeline
+                    data-aos="zoom-in-left"
+                    {...Animations.baseAosAnimation}
+                    achievements={achievements(i18n)}
+                  />
+                </S.TimelineWrapper>
+              </MediaMatch>
+            </S.AboutMeContentWrapper>
+          </S.AboutMe>
+        </S.AboutMeSectionDelimiter>
+      </S.AboutMeSection>
+
+      <S.StackSection>
+        <S.StackSectionDelimiter>
+          <S.Stack>
+            <Heading
+              data-aos="slide-right"
+              data-aos-offset="10"
+              {...Animations.baseAosAnimation}
+              data-aos-duration="1000"
+            >
+              {i18n.t('my_stack')}
+            </Heading>
+            <Space stars={20}>
+              <S.ShelfWrapper
+                data-aos="zoom-in-left"
+                {...Animations.baseAosAnimation}
+              >
+                <CardShelf cards={technologies} />
+              </S.ShelfWrapper>
+            </Space>
+          </S.Stack>
+        </S.StackSectionDelimiter>
+      </S.StackSection>
     </S.Wrapper>
   )
 }

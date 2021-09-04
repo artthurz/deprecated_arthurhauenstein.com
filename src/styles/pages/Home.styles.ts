@@ -7,39 +7,22 @@ import * as HeadingStyles from '@/components/Heading/Heading.styles'
 import * as MediaMatch from '@/components/MediaMatch/MediaMatch'
 
 export const Wrapper = styled.div`
-  ${({ theme }) => css`
-    padding: ${theme.spacings.xxlarge} 0;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas:
-      'info media'
-      'highlight media'
-      'aboutMe aboutMe'
-      'stack stack'
-      'testimonial testimonial';
-    grid-template-rows: auto auto auto 60rem auto;
-
-    ${media.lessThan('medium')`
-      grid-template-areas: "info" "media" "highlight" "aboutMe" "stack" "testimonial";
-      grid-template-rows: auto auto auto auto auto auto;
-      grid-template-columns: 1fr;
-      padding: 0 0;
-    `};
-
-    ${media.between('medium', 'large')`
-      grid-template-rows: auto auto auto 80rem auto;
-    `};
-  `}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 `
 
-export const InfoGroup = styled.section`
+export const InfoGroup = styled.div`
   grid-area: info;
 `
 
-export const MediaGroup = styled.section`
+export const MediaGroup = styled.div`
   grid-area: media;
   justify-self: center;
   position: relative;
+  height: calc(100vh - 98px);
 
   ${media.lessThan('medium')`
     width: 20em;
@@ -121,6 +104,81 @@ export const HighlightGroup = styled.div`
     ${HighlightBoxStyles.Wrapper} {
       margin-top: ${theme.spacings.medium};
     }
+  `}
+`
+
+export const IntroductionSection = styled.section`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+export const IntroductionSectionDelimiter = styled.div`
+  ${({ theme }) => css`
+    max-width: ${theme.grid.container};
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      'info media'
+      'highlight media';
+    grid-template-rows: auto auto;
+    padding: ${theme.spacings.medium} ${theme.spacings.medium};
+
+    ${media.lessThan('medium')`
+      padding: ${theme.spacings.xsmall} ${theme.spacings.xsmall};
+      grid-template-areas: "info" "media" "highlight";
+      grid-template-columns: 1fr;
+    `};
+  `}
+`
+
+export const AboutMeSection = styled.section`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ${({ theme }) => css`
+    background-color: ${theme.colors.black01};
+  `}
+`
+
+export const AboutMeSectionDelimiter = styled.div`
+  ${({ theme }) => css`
+    max-width: ${theme.grid.container};
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 'aboutMe aboutMe';
+    grid-template-rows: auto auto;
+    padding: ${theme.spacings.medium} ${theme.spacings.medium};
+
+    ${media.lessThan('medium')`
+      padding: ${theme.spacings.xsmall} ${theme.spacings.xsmall};
+      grid-template-areas: "aboutMe";
+      grid-template-columns: 1fr;
+    `};
+  `}
+`
+
+export const StackSection = styled.section`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+export const StackSectionDelimiter = styled.div`
+  ${({ theme }) => css`
+    max-width: ${theme.grid.container};
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 'stack stack';
+
+    padding: ${theme.spacings.medium} ${theme.spacings.medium};
+
+    ${media.lessThan('medium')`
+      padding: ${theme.spacings.xsmall} ${theme.spacings.xsmall};
+    `};
   `}
 `
 
