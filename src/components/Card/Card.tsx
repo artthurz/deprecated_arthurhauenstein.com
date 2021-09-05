@@ -65,9 +65,20 @@ const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
   }
 
   return (
-    <S.Wrapper ref={wrapperRef} style={cardPerspective} {...props}>
+    <S.Wrapper style={cardPerspective} {...props}>
       <div style={childrenPerspective}>{children}</div>
       <h1 style={{ marginLeft: '10px' }}>{title}</h1>
+      <div
+        style={{
+          position: 'absolute',
+          zIndex: 10,
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 0
+        }}
+        ref={wrapperRef}
+      ></div>
     </S.Wrapper>
   )
 }

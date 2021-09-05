@@ -3,6 +3,7 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
+  position: relative;
     color: ${theme.colors.white};
     font-weight: ${theme.font.bold};
     background-color: ${theme.colors.background};
