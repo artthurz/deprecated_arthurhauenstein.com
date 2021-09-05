@@ -52,8 +52,8 @@ const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
     }
 
     const childrenStyle = {
-      transform: `translate3d(${-rotateYPercentage * 0.25}%, ${
-        rotateXPercentage * 0.25
+      transform: `translate3d(${rotateYPercentage * 0.25}%, ${
+        -rotateXPercentage * 0.25
       }%, 0)`
     }
 
