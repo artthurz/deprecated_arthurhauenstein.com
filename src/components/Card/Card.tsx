@@ -13,7 +13,7 @@ const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
   const [childrenPerspective, setChildrenPerspective] = useState({})
 
   useEffect(() => {
-    wrapperRef.current?.addEventListener('mousemove', handleMouseMovement)
+    wrapperRef.current?.addEventListener('pointermove', handleMouseMovement)
     wrapperRef.current?.addEventListener('mouseout', () => {
       setCardPerspective({
         transform: 'scale(1) rotateX(0) rotateY(0)',
@@ -26,7 +26,10 @@ const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const handleMouseMovement = (event: MouseEvent) => {
+  const handleMouseMovement = (event: PointerEvent) => {
+    if (event.pointerType !== 'mouse') {
+      event.preventDefault()
+    }
     const { clientX, clientY } = event
     const elBoundingClientRect = wrapperRef.current?.getBoundingClientRect()
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
