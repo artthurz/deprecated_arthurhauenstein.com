@@ -13,8 +13,9 @@ const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
   const [childrenPerspective, setChildrenPerspective] = useState({})
 
   useEffect(() => {
-    wrapperRef.current?.addEventListener('pointermove', handleMouseMovement)
-    wrapperRef.current?.addEventListener('mouseout', () => {
+    wrapperRef.current?.addEventListener('pointermove', handlePointerMove)
+
+    wrapperRef.current?.addEventListener('pointerleave', () => {
       setCardPerspective({
         transform: 'scale(1) rotateX(0) rotateY(0)',
         transition: 'box-shadow 0.3s, transform 0.3s'
@@ -26,7 +27,7 @@ const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const handleMouseMovement = (event: PointerEvent) => {
+  const handlePointerMove = (event: PointerEvent) => {
     if (event.pointerType !== 'mouse') {
       event.preventDefault()
     }
@@ -65,7 +66,7 @@ const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
   }
 
   return (
-    <S.Wrapper style={cardPerspective} {...props}>
+    <S.Wrapper style={{ ...cardPerspective, touchAction: 'none' }} {...props}>
       <S.CardOverlay ref={wrapperRef}></S.CardOverlay>
       <div style={childrenPerspective}>{children}</div>
       <h1 style={{ marginLeft: '10px' }}>{title}</h1>
