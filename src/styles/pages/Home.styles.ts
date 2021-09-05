@@ -25,6 +25,7 @@ export const MediaGroup = styled.div`
 
   ${media.lessThan('medium')`
     width: 20em;
+    height: 20em;
   `}
 `
 
@@ -144,8 +145,9 @@ export const IntroductionSectionDelimiter = styled.div`
     min-height: 600px;
 
     ${media.lessThan('medium')`
-      padding: ${theme.spacings.xsmall} ${theme.spacings.xsmall};
+      padding: ${theme.spacings.xsmall};
       grid-template-areas: "info" "media" "highlight";
+      grid-template-rows: 35% 35% 30%;
       grid-template-columns: 1fr;
       height: auto;
     `};
