@@ -66,19 +66,9 @@ const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
 
   return (
     <S.Wrapper style={cardPerspective} {...props}>
+      <S.CardOverlay ref={wrapperRef}></S.CardOverlay>
       <div style={childrenPerspective}>{children}</div>
       <h1 style={{ marginLeft: '10px' }}>{title}</h1>
-      <div
-        style={{
-          position: 'absolute',
-          zIndex: 10,
-          top: 0,
-          right: 0,
-          bottom: 0,
-          left: 0
-        }}
-        ref={wrapperRef}
-      ></div>
     </S.Wrapper>
   )
 }
