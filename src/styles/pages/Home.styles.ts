@@ -85,6 +85,9 @@ export const Description = styled.h3`
     color: ${theme.colors.white};
     font-size: ${theme.font.sizes.large};
     font-weight: ${theme.font.normal};
+    ${media.lessThan('medium')`
+      text-align: center;
+    `}
   `}
 `
 
@@ -94,15 +97,28 @@ export const HighlightGroup = styled.div`
   ${({ theme }) => css`
     margin: ${theme.spacings.xlarge} 0;
     grid-area: highlight;
-    place-self: center;
-
-    ${media.lessThan('medium')`
-      margin: ${theme.spacings.xsmall} 0;
-    `}
-
+    z-index: 1;
+    padding-top: 15rem;
     ${HighlightBoxStyles.Wrapper} {
       margin-top: ${theme.spacings.medium};
     }
+
+    ${media.lessThan('huge')`
+      margin: ${theme.spacings.xsmall} 0;
+      display: flex;
+      flex-direction: row;
+      ${HighlightBoxStyles.Wrapper} {
+      margin-left: ${theme.spacings.medium};
+
+    `}
+
+    ${media.lessThan('medium')`
+      margin: ${theme.spacings.xsmall} 0;
+      padding-top: ${theme.spacings.xsmall};
+      place-self: center;
+      display: flex;
+      flex-direction: column;
+    `}
   `}
 `
 
@@ -111,6 +127,7 @@ export const IntroductionSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 `
 
 export const IntroductionSectionDelimiter = styled.div`
@@ -121,9 +138,10 @@ export const IntroductionSectionDelimiter = styled.div`
     grid-template-areas:
       'info media'
       'highlight media';
-    grid-template-rows: auto auto;
+    grid-template-rows: 30% 70%;
     padding: ${theme.spacings.medium} ${theme.spacings.medium};
     height: calc(100vh - 97px);
+    min-height: 600px;
 
     ${media.lessThan('medium')`
       padding: ${theme.spacings.xsmall} ${theme.spacings.xsmall};
@@ -264,80 +282,5 @@ export const ShelfWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-  `}
-`
-
-export const SliderWrapper = styled.div`
-  max-width: calc(100vw - 9rem);
-  width: 100%;
-  overflow: hidden;
-
-  ${media.lessThan('medium')`
-    max-width: calc(100vw - 5rem);
-  `}
-`
-
-export const TestimonialDescription = styled.h3`
-  ${({ theme }) => css`
-    color: ${theme.colors.primary02};
-    font-weight: ${theme.font.light};
-    font-size: 2.8rem;
-    flex: 1;
-
-    ${media.between('medium', 'large')`
-      font-size: 2.4rem;
-    `};
-
-    ${media.lessThan('medium')`
-      font-size: 1.8rem;
-    `};
-  `}
-`
-
-export const TestimonialDescriptionWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 8rem;
-
-  ${MediaMatch.default} {
-    flex: 1;
-  }
-
-  ${media.lessThan('medium')`
-    margin-bottom: 4rem;
-  `};
-
-  ${media.between('medium', 'large')`
-    margin-bottom: 6rem;
-  `};
-`
-
-export const TestimonialImageWrapper = styled.div`
-  width: 45rem;
-  margin: 0 auto;
-
-  ${media.lessThan('medium')`
-    max-width: 15rem;
-    width: 100%;
-  `};
-
-  ${media.between('medium', 'large')`
-    width: 30rem;
-  `};
-`
-
-export const TestimonialImage = styled(NextImage)``
-
-export const Testimonial = styled.section`
-  ${({ theme }) => css`
-    grid-area: testimonial;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: ${theme.spacings.large};
-
-    ${HeadingStyles.Wrapper} {
-      margin-bottom: ${theme.spacings.large};
-    } ;
   `}
 `

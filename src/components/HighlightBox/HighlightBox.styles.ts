@@ -15,6 +15,8 @@ export const Ellipse = styled.div`
     border-radius: 100px;
     width: 8rem;
     height: 8rem;
+    min-width: 8rem;
+    min-height: 8rem;
     margin-right: ${theme.spacings.xsmall};
     transition: all 0.5s ease;
 
@@ -28,9 +30,18 @@ export const Ellipse = styled.div`
       }
     }
 
+    ${media.lessThan('huge')`
+      width: 7rem;
+      height: 7rem;
+      min-width: 7rem;
+      min-height: 7rem;
+    `}
+
     ${media.lessThan('medium')`
       width: 6rem;
       height: 6rem;
+      min-width: 6rem;
+      min-height: 6rem;
     `}
   `}
 `
