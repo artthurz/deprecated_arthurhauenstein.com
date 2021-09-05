@@ -14,39 +14,41 @@ const Card = ({ children, shadowColor, ...props }: CardProps) => {
     wrapperRef.current?.addEventListener('mousemove', handleMouseMovement)
     wrapperRef.current?.addEventListener('mouseout', () => {
       setCardPerspective({
-        transform: 'scale(1) rotateX(0) rotateY(0)'
+        transform: 'scale(1) rotateX(0) rotateY(0)',
+        transition: 'box-shadow 0.3s, transform 0.3s'
       })
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleMouseMovement = (event: MouseEvent) => {
-    const height = wrapperRef.current?.clientHeight
-    const width = wrapperRef.current?.clientWidth
+    const { clientX, clientY } = event
+    const elBoundingClientRect = wrapperRef.current?.getBoundingClientRect()
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const { top, left, width, height }: any = elBoundingClientRect
 
-    const xPosition = event.offsetX
-    const yPosition = event.offsetY
+    const centerX = width / 2
+    const centerY = height / 2
 
-    const yRotation = 20 * ((xPosition - width! / 2) / width!)
-    const xRotation = -20 * ((yPosition - height! / 2) / height!)
+    const coordX = clientX - left
+    const coordY = clientY - top
+
+    const rotateY = (15 * (coordX - centerX)) / (width / 2)
+    const rotateX = ((30 * (coordY - centerY)) / (height / 2)) * -1
 
     const newStyle = {
       transform:
-        `scale(1.1) rotateX(` +
-        xRotation +
-        `deg) rotateY(` +
-        yRotation +
-        `deg)`,
+        `scale(1.2) rotateX(` + rotateX + `deg) rotateY(` + rotateY + `deg)`,
       boxShadow:
-        -yRotation +
+        -rotateY / 2 +
         `px ` +
-        xRotation +
+        rotateX / 2 +
         `px 10px ` +
         shadowColor +
         `, inset ` +
-        -yRotation +
+        -rotateY / 3 +
         `px ` +
-        xRotation +
+        rotateX / 3 +
         `px 40px rgba(255, 255, 255, 0.2)`
     }
 

@@ -90,6 +90,17 @@ export const IconWrapper = styled.div`
     cursor: pointer;
   `}
 `
+export const SwitchWrapper = styled.div`
+  cursor: pointer;
+
+  ${media.greaterThan('medium')`
+      margin-right: 2rem;
+  `}
+
+  ${media.lessThan('medium')`
+      margin-top: 2rem;
+  `}
+`
 
 type MenuFullProps = {
   isOpen: boolean

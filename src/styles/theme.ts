@@ -95,7 +95,7 @@ const LightTheme = {
   colors: {
     background: '#ffffff',
     background02: '#35353D',
-    text: '#e1e1e6',
+    text: '#b7b7c3',
     red: '#D92E3F',
     primary: '#1bb3e0',
     primary01: '#5fc9e9',
@@ -115,7 +115,7 @@ const LightTheme = {
       'linear-gradient(265.22deg, #5fc9e9 -1.83%, rgba(40, 245, 190, 0) 95.01%)',
     gradient03: 'linear-gradient(83.89deg, #5fc9e9 2.81%, #3B37FF 97.94%)',
     gradient04: 'linear-gradient(333.93deg, #2f2f2f 0%, #35353D 100%)',
-    white: '#FFFFFF',
+    white: '#35353D',
     gray: '#D4D4D4'
   },
   spacings: {

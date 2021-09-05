@@ -33,6 +33,7 @@ function App({ Component, pageProps }: AppProps) {
           <link rel="apple-touch-icon" href="/img/icon.svg" />
           <link rel="manifest" href="/manifest.json" />
           <link rel="stylesheet" href="/css/aos.css" />
+          <link rel="stylesheet" href="/css/switch.css" />
           <link
             rel="alternate"
             hrefLang="pt"

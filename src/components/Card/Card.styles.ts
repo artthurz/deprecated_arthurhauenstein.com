@@ -17,11 +17,11 @@ export const Wrapper = styled.div`
     cursor: pointer
 
     z-index: 1;
-    transition: box-shadow 0.5s, transform 0.5s;
+    transition: box-shadow 0.6s, transform 0.6s;
 
     &:hover {
       cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.1s;
+      transition: transform 0s, box-shadow 0s;
     }
     ${media.lessThan('medium')`
       padding: 0.4rem;
