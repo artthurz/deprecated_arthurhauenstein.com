@@ -20,6 +20,7 @@ export const Wrapper = styled.div`
 
     z-index: 1;
     transition: box-shadow 0.6s, transform 0.6s;
+    touch-action: none;
 
     h1{
       marginLeft: 10px

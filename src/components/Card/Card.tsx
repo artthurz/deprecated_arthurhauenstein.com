@@ -14,7 +14,6 @@ const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
 
   useEffect(() => {
     wrapperRef.current?.addEventListener('pointermove', handlePointerMove)
-
     wrapperRef.current?.addEventListener('pointerleave', () => {
       setCardPerspective({
         transform: 'scale(1) rotateX(0) rotateY(0)',
@@ -42,8 +41,20 @@ const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
     const coordX = clientX - left
     const coordY = clientY - top
 
-    const rotateY = (15 * (coordX - centerX)) / (width / 2)
-    const rotateX = ((30 * (coordY - centerY)) / (height / 2)) * -1
+    let rotateY = (15 * (coordX - centerX)) / (width / 2)
+    let rotateX = ((30 * (coordY - centerY)) / (height / 2)) * -1
+
+    if (rotateX > 0) {
+      rotateX = rotateX > 30 ? 30 : rotateX
+    } else {
+      rotateX = rotateX < -30 ? -30 : rotateX
+    }
+
+    if (rotateY > 0) {
+      rotateY = rotateY > 30 ? 30 : rotateY
+    } else {
+      rotateY = rotateY < -30 ? -30 : rotateY
+    }
 
     const rotateXPercentage = (rotateX / 30) * 100
     const rotateYPercentage = (rotateY / 15) * 100
@@ -57,7 +68,7 @@ const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
 
     const childrenStyle = {
       transform: `translate3d(${rotateYPercentage * 0.25}%, ${
-        -rotateXPercentage * 0.25
+        -(rotateXPercentage > 70) * 0.25
       }%, 0)`
     }
 
@@ -66,7 +77,7 @@ const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
   }
 
   return (
-    <S.Wrapper style={{ ...cardPerspective, touchAction: 'none' }} {...props}>
+    <S.Wrapper style={cardPerspective} {...props}>
       <S.CardOverlay ref={wrapperRef}></S.CardOverlay>
       <div style={childrenPerspective}>{children}</div>
       <h1 style={{ marginLeft: '10px' }}>{title}</h1>
