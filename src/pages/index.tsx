@@ -98,26 +98,26 @@ const achievements = (i18n: i18n): Achievement[] => [
 ]
 
 const technologies: React.ReactNode[] = [
-  <Card key="react" shadowColor="#61D9FA">
+  <Card key="react" shadowColor="#61D9FA" title="React">
     <ReactIcon height={90} width={90} alt="React" />
   </Card>,
-  <Card key="node" shadowColor="#408F3B">
-    <NodeIcon height={90} width={90} alt="Node JS" />
+  <Card key="node" shadowColor="#408F3B" title="Node">
+    <NodeIcon height={90} width={90} alt="Node" />
   </Card>,
-  <Card key="reactnative" shadowColor="#9261FB">
+  <Card key="reactnative" shadowColor="#9261FB" title="React Native">
     <ReactNativeIcon height={90} width={90} alt="React Native" />
   </Card>,
-  <Card key="typescript" shadowColor="#01ADD7">
-    <TypescriptIcon height={60} width={60} alt="Typescript" />
+  <Card key="typescript" shadowColor="#01ADD7" title="TypeScript">
+    <TypescriptIcon height={90} width={90} alt="Typescript" />
   </Card>,
-  <Card key="mongo" shadowColor="#419842">
-    <MongoDBIcon height={90} width={90} alt="Mongo DB" />
+  <Card key="mongo" shadowColor="#419842" title="MongoDB">
+    <MongoDBIcon height={90} width={90} alt="MongoDB" />
   </Card>,
-  <Card key="docker" shadowColor="#ffffff">
+  <Card key="docker" shadowColor="#ffffff" title="Docker">
     <DockerIcon height={90} width={90} alt="Docker" />
   </Card>,
-  <Card key="postgresql" shadowColor="#2D6294">
-    <PostgreSQLIcon height={60} width={60} alt="PostgreSQL" />
+  <Card key="postgresql" shadowColor="#2D6294" title="PostgreSQL">
+    <PostgreSQLIcon height={90} width={90} alt="PostgreSQL" />
   </Card>
 ]
 

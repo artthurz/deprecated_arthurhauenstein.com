@@ -15,9 +15,14 @@ export const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     cursor: pointer
+    filter: blur(30px);
 
     z-index: 1;
     transition: box-shadow 0.6s, transform 0.6s;
+
+    h1{
+      marginLeft: 10px
+    }
 
     &:hover {
       cursor: pointer;
@@ -25,8 +30,10 @@ export const Wrapper = styled.div`
     }
     ${media.lessThan('medium')`
       padding: 0.4rem;
+      margin: 0;
       width: 15rem;
-      height: 10rem;
+      height: 15rem;
+      flex-direction: column;
     `};
   `}
 `
