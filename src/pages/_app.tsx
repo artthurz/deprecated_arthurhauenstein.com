@@ -1,24 +1,23 @@
 import { useEffect } from 'react'
 import type { AppProps } from 'next/app'
-import { ThemeProvider } from 'styled-components'
 import Head from 'next/head'
 import AOS from 'aos'
 
+import { ThemeProvider } from '@/contexts/theme'
 import * as S from '@/styles/pages/_app.styles'
 import GlobalStyles from '../styles/global'
-import theme from '../styles/theme'
 import { Menu } from '@/components/Menu'
 import { Footer } from '@/components/Footer'
 import I18NProvider from '@/i18n/context/I18NProvider'
 
-function App({ Component, pageProps }: AppProps): JSX.Element {
+function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     AOS.init()
   }, [])
 
   return (
     <I18NProvider>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider>
         <Head>
           <meta charSet="utf-8" />
           <meta
@@ -27,7 +26,7 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
           />
           <meta
             name="description"
-            content="This is my personal page, where I will update my portfolio and bring news about myself."
+            content="I`m a Fullstack Enginner and this is my personal page, where I will update my portfolio and bring news about myself."
           />
           <title>Arthur Hauenstein</title>
           <link rel="shortcut icon" href="/img/icon.svg" />
