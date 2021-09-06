@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
-  position: relative;
+    position: relative;
     color: ${theme.colors.white};
     font-weight: ${theme.font.bold};
     background-color: ${theme.colors.background};
@@ -11,19 +11,19 @@ export const Wrapper = styled.div`
     padding: ${theme.spacings.xxsmall};
     width: 25rem;
     height: 15rem;
+    overflow: hidden;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer
-    filter: blur(30px);
+    filter: blur(0.1px);
 
     z-index: 1;
     transition: box-shadow 0.6s, transform 0.6s;
     touch-action: none;
 
-    h1{
-      marginLeft: 10px
+    h1 {
+      marginleft: 10px;
     }
 
     &:hover {
@@ -47,4 +47,26 @@ export const CardOverlay = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
+  cursor: pointer;
+`
+export const Highlight = styled.div`
+  transform: translate3d(0px, 0px, 0px);
+  transition-duration: 600ms;
+  opacity: 0;
+
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(
+    circle at 50%,
+    rgba(255, 255, 255, 0.25),
+    transparent 50%
+  );
+  z-index: 0;
+
+  position: absolute;
+  pointer-events: none;
+  transition-property: transform, opacity;
+  display: block;
 `
