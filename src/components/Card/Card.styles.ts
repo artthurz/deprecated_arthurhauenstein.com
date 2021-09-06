@@ -16,7 +16,6 @@ export const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    filter: blur(0.1px);
 
     z-index: 1;
     transition: box-shadow 0.6s, transform 0.6s;
