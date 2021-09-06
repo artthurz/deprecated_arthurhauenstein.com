@@ -125,7 +125,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
 
     > svg {
       position: absolute;
-      top: 0;
+      top: 8px;
       right: 0;
       margin: ${theme.spacings.xsmall};
       color: ${theme.colors.text02};
