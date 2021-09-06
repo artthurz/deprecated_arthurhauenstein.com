@@ -30,7 +30,7 @@ const DarkTheme = {
     footer: '#35353D',
     text: '#e1e1e6',
     text02: '#ffffff',
-    text03: '#878a8f',
+    text03: '#ffffff',
     red: '#D92E3F',
     primary: '#1bb3e0',
     primary01: '#5fc9e9',
