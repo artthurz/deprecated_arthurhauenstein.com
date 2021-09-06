@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Loading = styled.div`
   display: inline-block;
@@ -12,7 +12,10 @@ export const Loading = styled.div`
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    background: #fff;
+    ${({ theme }) => css`
+      background: ${theme.colors.text02};
+    `}
+
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
   }
 
