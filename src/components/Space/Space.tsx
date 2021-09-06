@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 
 import * as S from './Space.styles'
 import useStars from '@/hooks/useStars'
+import useTheme from '@/hooks/useTheme'
 
 export type SpaceProps = {
   stars?: number
@@ -11,6 +12,7 @@ export type SpaceProps = {
 const Space = ({ stars = 0, children }: SpaceProps) => {
   const wrapperRef = useRef<HTMLDivElement>(null)
   const starNodes = useStars({ stars, wrapperDelimiter: wrapperRef })
+  const { theme } = useTheme()
 
   return (
     <S.Wrapper ref={wrapperRef}>
@@ -34,9 +36,19 @@ const Space = ({ stars = 0, children }: SpaceProps) => {
               y2="87.9999"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#27272D" stopOpacity="0" />
-              <stop offset="0.506491" stopColor="#27272D" />
-              <stop offset="1" stopColor="#27272D" stopOpacity="0" />
+              <stop
+                stopColor={theme === 'dark' ? '#27272D' : '#EEEEEE'}
+                stopOpacity="0"
+              />
+              <stop
+                offset="0.506491"
+                stopColor={theme === 'dark' ? '#27272D' : '#EEEEEE'}
+              />
+              <stop
+                offset="1"
+                stopColor={theme === 'dark' ? '#27272D' : '#EEEEEE'}
+                stopOpacity="0"
+              />
             </linearGradient>
           </defs>
         </svg>
@@ -61,9 +73,19 @@ const Space = ({ stars = 0, children }: SpaceProps) => {
               y2="117"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#27272D" stopOpacity="0" />
-              <stop offset="0.506491" stopColor="#27272D" />
-              <stop offset="1" stopColor="#27272D" stopOpacity="0" />
+              <stop
+                stopColor={theme === 'dark' ? '#27272D' : '#EEEEEE'}
+                stopOpacity="0"
+              />
+              <stop
+                offset="0.506491"
+                stopColor={theme === 'dark' ? '#27272D' : '#EEEEEE'}
+              />
+              <stop
+                offset="1"
+                stopColor={theme === 'dark' ? '#27272D' : '#EEEEEE'}
+                stopOpacity="0"
+              />
             </linearGradient>
           </defs>
         </svg>

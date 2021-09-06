@@ -61,7 +61,7 @@ export const PrimaryText = styled.h2`
 
 export const SecondaryText = styled.h5`
   ${({ theme }) => css`
-    color: ${theme.colors.white};
+    color: ${theme.colors.text03};
     font-size: ${theme.font.sizes.medium};
     font-weight: ${theme.font.light};
 

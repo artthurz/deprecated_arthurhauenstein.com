@@ -33,7 +33,7 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.h3`
   ${({ theme }) => css`
-    color: ${theme.colors.white};
+    color: ${theme.colors.text02};
     font-weight: ${theme.font.medium};
     margin-bottom: ${theme.spacings.large};
     text-align: justify;

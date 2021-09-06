@@ -4,7 +4,7 @@ import media from 'styled-media-query'
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     position: relative;
-    color: ${theme.colors.white};
+    color: ${theme.colors.text02};
     font-weight: ${theme.font.bold};
     background-color: ${theme.colors.background};
     border-radius: 20px;
@@ -50,6 +50,19 @@ export const CardOverlay = styled.div`
   cursor: pointer;
 `
 export const Highlight = styled.div`
+  ${({ theme }) => css`
+    background-image: ${theme.type === 'dark'
+      ? `radial-gradient(
+      circle at 50%,
+      rgba(255, 255, 255, 0.25),
+      transparent 50%
+    )`
+      : `radial-gradient(
+      circle at 50%,
+      rgba(0, 0, 0, 0.25),
+      transparent 50%
+    );`};
+  `}
   transform: translate3d(0px, 0px, 0px);
   transition-duration: 600ms;
   opacity: 0;
@@ -58,11 +71,6 @@ export const Highlight = styled.div`
   top: -50%;
   width: 200%;
   height: 200%;
-  background-image: radial-gradient(
-    circle at 50%,
-    rgba(255, 255, 255, 0.25),
-    transparent 50%
-  );
   z-index: 0;
 
   position: absolute;

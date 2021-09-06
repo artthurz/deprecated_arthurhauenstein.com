@@ -40,7 +40,7 @@ type MenuLinkProps = {
 
 export const MenuLink = styled.a<MenuLinkProps>`
   ${({ theme, isActive }) => css`
-    color: ${theme.colors.white} !important;
+    color: ${theme.colors.text02} !important;
     font-size: ${theme.font.sizes.medium};
     font-weight: ${theme.font.bold};
     text-decoration: none;
@@ -84,7 +84,7 @@ export const MenuGroup = styled.div`
 
 export const IconWrapper = styled.div`
   ${({ theme }) => css`
-    color: ${theme.colors.white};
+    color: ${theme.colors.text02};
     width: ${theme.spacings.medium};
     height: ${theme.spacings.medium};
     cursor: pointer;
@@ -128,7 +128,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
       top: 0;
       right: 0;
       margin: ${theme.spacings.xsmall};
-      color: ${theme.colors.white};
+      color: ${theme.colors.text02};
       cursor: pointer;
       width: ${theme.spacings.medium};
       height: ${theme.spacings.medium};
@@ -143,7 +143,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
     }
 
     ${MenuLink} {
-      color: ${theme.colors.white};
+      color: ${theme.colors.text02};
       font-weight: ${theme.font.bold};
       font-size: ${theme.font.sizes.large};
       margin-left: 0 !important;

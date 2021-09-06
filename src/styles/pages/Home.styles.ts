@@ -35,7 +35,7 @@ export const Job = styled.h4`
     font-size: ${theme.font.sizes.medium};
     font-weight: ${theme.font.medium};
     margin-bottom: ${theme.spacings.small};
-    margin-top: ${theme.spacings.xxlarge};
+    margin-top: 9rem;
 
     ${media.lessThan('medium')`
       margin-top: ${theme.spacings.medium};
@@ -52,7 +52,7 @@ export const PresentationWrapper = styled.div`
 
 export const Presentation = styled.h1`
   ${({ theme }) => css`
-    color: ${theme.colors.white};
+    color: ${theme.colors.text02};
     overflow: hidden;
     display: inline-block;
     font-size: ${theme.font.sizes.xlarge};
@@ -72,7 +72,7 @@ export const Presentation = styled.h1`
     }
     @keyframes blinkTextCursor {
       from {
-        border-right-color: ${theme.colors.white};
+        border-right-color: ${theme.colors.text02};
       }
       to {
         border-right-color: transparent;
@@ -83,7 +83,7 @@ export const Presentation = styled.h1`
 
 export const Description = styled.h3`
   ${({ theme }) => css`
-    color: ${theme.colors.white};
+    color: ${theme.colors.text03};
     font-size: ${theme.font.sizes.large};
     font-weight: ${theme.font.normal};
     ${media.lessThan('medium')`
@@ -92,30 +92,43 @@ export const Description = styled.h3`
   `}
 `
 
-export const Photo = styled(NextImage)``
+export const Photo = styled(NextImage)`
+  z-index: 2;
+`
+export const NotebookAndPhoneContainer = styled.div`
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+`
+
+export const PhotoContainer = styled.div`
+  display: flex;
+`
 
 export const HighlightGroup = styled.div`
   ${({ theme }) => css`
-    margin: ${theme.spacings.xlarge} 0;
+    margin: 0;
     grid-area: highlight;
-    z-index: 1;
+    z-index: 3;
     padding-top: 15rem;
     ${HighlightBoxStyles.Wrapper} {
       margin-top: ${theme.spacings.medium};
     }
+    display: flex;
+    flex-direction: row;
 
     ${media.lessThan('huge')`
       margin: ${theme.spacings.xsmall} 0;
-      display: flex;
-      flex-direction: row;
+
       ${HighlightBoxStyles.Wrapper} {
       margin-left: ${theme.spacings.medium};
 
     `}
 
     ${media.lessThan('medium')`
-      margin: ${theme.spacings.xsmall} 0;
-      padding-top: ${theme.spacings.xsmall};
+      margin: ${theme.spacings.xxlarge} 0;
+      padding-top: ${theme.spacings.xlarge};
       place-self: center;
       display: flex;
       flex-direction: column;

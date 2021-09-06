@@ -13,6 +13,8 @@ import { MediaMatch } from '@/components/MediaMatch'
 import useI18N from '@/hooks/usei18n'
 import { i18n } from '@/i18n/protocols'
 
+import NotebookAndPhoneImage from '../../public/img/homePage/notebookAndPhone.svg'
+
 import ReactNativeIcon from '../../public/img/technologies/reactnative.svg'
 import ReactIcon from '../../public/img/technologies/react.svg'
 import NodeIcon from '../../public/img/technologies/node.svg'
@@ -162,12 +164,23 @@ const Home: NextPage = () => {
             data-aos-offset="50"
             {...Animations.baseAosAnimation}
           >
-            <S.Photo
-              src="/img/me/arthur_front.png"
-              alt={i18n.t('arthur_front_alt')}
-              width={521}
-              height={694}
-            />
+            <S.PhotoContainer>
+              <S.Photo
+                src="/img/me/arthur_front.png"
+                alt={i18n.t('arthur_front_alt')}
+                width={521}
+                height={694}
+              />
+              <S.NotebookAndPhoneContainer>
+                <NotebookAndPhoneImage
+                  key="react"
+                  shadowColor="#61D9FA"
+                  title="React"
+                  width={284}
+                  height={163}
+                />
+              </S.NotebookAndPhoneContainer>
+            </S.PhotoContainer>
           </S.MediaGroup>
         </S.IntroductionSectionDelimiter>
       </S.IntroductionSection>
@@ -176,6 +189,7 @@ const Home: NextPage = () => {
         <S.AboutMeSectionDelimiter>
           <S.AboutMe>
             <Heading
+              textColor="#fff"
               data-aos="slide-right"
               data-aos-offset="10"
               {...Animations.baseAosAnimation}

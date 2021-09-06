@@ -19,7 +19,9 @@ const Star = styled.div<StarProps>`
     height: 0.4rem;
     top: ${top}px;
     left: ${left}px;
-    background-color: ${theme.colors.white};
+    background-color: ${theme.type === 'dark'
+      ? '#FFFFFF'
+      : theme.colors.primary};
   `}
 `
 
