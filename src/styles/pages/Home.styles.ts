@@ -6,6 +6,16 @@ import * as HighlightBoxStyles from '@/components/HighlightBox/HighlightBox.styl
 import * as HeadingStyles from '@/components/Heading/Heading.styles'
 import * as MediaMatch from '@/components/MediaMatch/MediaMatch'
 
+import { ArrowRightShort } from '@styled-icons/bootstrap/ArrowRightShort'
+import NotebookAndPhoneImageImport from '../../../public/img/homePage/notebookAndPhone.svg'
+import ReactNativeIconImport from '../../../public/img/technologies/reactnative.svg'
+import ReactIconImport from '../../../public/img/technologies/react.svg'
+import NodeIconImport from '../../../public/img/technologies/node.svg'
+import TypescriptIconImport from '../../../public/img/technologies/typescript.svg'
+import MongoDBIconImport from '../../../public/img/technologies/mongo.svg'
+import DockerIconImport from '../../../public/img/technologies/docker.svg'
+import PostgreSQLIconImport from '../../../public/img/technologies/postgresql.svg'
+
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -147,6 +157,11 @@ export const IntroductionSection = styled.section`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  min-height: 600px;
+  height: calc(100vh - 97px);
+  ${media.lessThan('medium')`
+      height: auto;
+  `};
 `
 
 export const IntroductionSectionDelimiter = styled.div`
@@ -159,7 +174,6 @@ export const IntroductionSectionDelimiter = styled.div`
       'highlight media';
     grid-template-rows: 30% 70%;
     padding: ${theme.spacings.medium} ${theme.spacings.medium};
-    height: calc(100vh - 97px);
     min-height: 600px;
 
     ${media.lessThan('large')`
@@ -169,7 +183,7 @@ export const IntroductionSectionDelimiter = styled.div`
     ${media.lessThan('medium')`
       padding: ${theme.spacings.xsmall};
       grid-template-areas: "info" "media" "highlight";
-      grid-template-rows: 25% 40% 35%;
+      grid-template-rows: 33% 32% 35%;
       grid-template-columns: 1fr;
       height: auto;
     `};
@@ -213,9 +227,6 @@ export const StackSection = styled.section`
 export const StackSectionDelimiter = styled.div`
   ${({ theme }) => css`
     max-width: ${theme.grid.container};
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: 'stack stack';
 
     padding: ${theme.spacings.medium} ${theme.spacings.medium};
 
@@ -339,7 +350,7 @@ export const LetsWorkTogetherLinkContainer = styled.div`
       font-weight: ${theme.font.bold};
       font-size: ${theme.font.sizes.xxxlarge};
       ${media.lessThan('medium')`
-        font-size: ${theme.font.sizes.xlarge};
+        font-size: ${theme.font.sizes.mediumlarge};
       `}
       text-decoration: none;
 
@@ -358,4 +369,43 @@ export const LetsWorkTogetherLinkContainer = styled.div`
       }
     }
   `}
+`
+export const ArrowRightIcon = styled(ArrowRightShort)`
+  width: 60px;
+  ${media.lessThan('medium')`
+      width: 40px;
+  `}
+`
+
+export const NotebookAndPhoneImage = styled(NotebookAndPhoneImageImport)`
+  width: 284px;
+  height: 163px;
+`
+export const ReactIcon = styled(ReactIconImport)`
+  width: 90px;
+  height: 90px;
+`
+export const ReactNativeIcon = styled(ReactNativeIconImport)`
+  width: 90px;
+  height: 90px;
+`
+export const NodeIcon = styled(NodeIconImport)`
+  width: 90px;
+  height: 90px;
+`
+export const TypescriptIcon = styled(TypescriptIconImport)`
+  width: 90px;
+  height: 90px;
+`
+export const MongoDBIcon = styled(MongoDBIconImport)`
+  width: 90px;
+  height: 90px;
+`
+export const DockerIcon = styled(DockerIconImport)`
+  width: 90px;
+  height: 90px;
+`
+export const PostgreSQLIcon = styled(PostgreSQLIconImport)`
+  width: 90px;
+  height: 90px;
 `

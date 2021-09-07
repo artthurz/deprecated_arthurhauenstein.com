@@ -13,18 +13,6 @@ import { MediaMatch } from '@/components/MediaMatch'
 import useI18N from '@/hooks/usei18n'
 import { i18n } from '@/i18n/protocols'
 
-import { ArrowRightShort as ArrowRightIcon } from '@styled-icons/bootstrap/ArrowRightShort'
-
-import NotebookAndPhoneImage from '../../public/img/homePage/notebookAndPhone.svg'
-
-import ReactNativeIcon from '../../public/img/technologies/reactnative.svg'
-import ReactIcon from '../../public/img/technologies/react.svg'
-import NodeIcon from '../../public/img/technologies/node.svg'
-import TypescriptIcon from '../../public/img/technologies/typescript.svg'
-import MongoDBIcon from '../../public/img/technologies/mongo.svg'
-import DockerIcon from '../../public/img/technologies/docker.svg'
-import PostgreSQLIcon from '../../public/img/technologies/postgresql.svg'
-
 const achievements = (i18n: i18n): Achievement[] => [
   {
     date: new Date('2021-08-07T00:00:00'),
@@ -103,25 +91,25 @@ const achievements = (i18n: i18n): Achievement[] => [
 
 const technologies: React.ReactNode[] = [
   <Card key="react" shadowColor="#61D9FA" title="React">
-    <ReactIcon height={90} width={90} alt="React" />
+    <S.ReactIcon alt="React" />
   </Card>,
   <Card key="node" shadowColor="#408F3B" title="Node">
-    <NodeIcon height={90} width={90} alt="Node" />
+    <S.NodeIcon alt="Node" />
   </Card>,
   <Card key="reactnative" shadowColor="#9261FB" title="React Native">
-    <ReactNativeIcon height={90} width={90} alt="React Native" />
+    <S.ReactNativeIcon alt="React Native" />
   </Card>,
   <Card key="typescript" shadowColor="#01ADD7" title="TypeScript">
-    <TypescriptIcon height={90} width={90} alt="Typescript" />
+    <S.TypescriptIcon alt="Typescript" />
   </Card>,
   <Card key="mongo" shadowColor="#419842" title="MongoDB">
-    <MongoDBIcon height={90} width={90} alt="MongoDB" />
+    <S.MongoDBIcon alt="MongoDB" />
   </Card>,
   <Card key="docker" shadowColor="#ffffff" title="Docker">
-    <DockerIcon height={90} width={90} alt="Docker" />
+    <S.DockerIcon alt="Docker" />
   </Card>,
   <Card key="postgresql" shadowColor="#2D6294" title="PostgreSQL">
-    <PostgreSQLIcon height={90} width={90} alt="PostgreSQL" />
+    <S.PostgreSQLIcon alt="PostgreSQL" />
   </Card>
 ]
 
@@ -174,13 +162,7 @@ const Home: NextPage = () => {
                 height={694}
               />
               <S.NotebookAndPhoneContainer>
-                <NotebookAndPhoneImage
-                  key="react"
-                  shadowColor="#61D9FA"
-                  title="React"
-                  width={284}
-                  height={163}
-                />
+                <S.NotebookAndPhoneImage key="react" title="React" />
               </S.NotebookAndPhoneContainer>
             </S.PhotoContainer>
           </S.MediaGroup>
@@ -273,7 +255,7 @@ const Home: NextPage = () => {
           data-aos-duration="1000"
         >
           <a href="/contact">
-            {i18n.t('lets_work_together')} <ArrowRightIcon width={60} />
+            {i18n.t('lets_work_together')} <S.ArrowRightIcon />
           </a>
         </S.LetsWorkTogetherLinkContainer>
       </S.LetsWorkTogetherSection>
