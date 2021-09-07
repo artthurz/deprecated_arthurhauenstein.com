@@ -318,6 +318,9 @@ export const LetsWorkTogetherSection = styled.section`
     justify-content: center;
     padding: 10rem 0;
     min-height: 300px;
+    ${media.lessThan('medium')`
+        min-height: 150px;
+      `}
 
     h4 {
       color: ${theme.colors.primary};
