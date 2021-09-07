@@ -55,7 +55,11 @@ export const Presentation = styled.h1`
     color: ${theme.colors.text02};
     overflow: hidden;
     display: inline-block;
-    font-size: ${theme.font.sizes.xlarge};
+    font-size: ${theme.font.sizes.xxxlarge};
+    ${media.lessThan('medium')`
+        font-size: ${theme.font.sizes.xlarge};
+    `}
+    z-index:25;
     font-weight: ${theme.font.bold};
     border-right: 0.15em solid ${theme.colors.white}; /* The typwriter cursor */
     white-space: nowrap;
@@ -123,6 +127,7 @@ export const HighlightGroup = styled.div`
 
       ${HighlightBoxStyles.Wrapper} {
       margin-left: ${theme.spacings.medium};
+      }
 
     `}
 
@@ -157,10 +162,14 @@ export const IntroductionSectionDelimiter = styled.div`
     height: calc(100vh - 97px);
     min-height: 600px;
 
+    ${media.lessThan('large')`
+      grid-template-rows: 40% 60%;
+    `};
+
     ${media.lessThan('medium')`
       padding: ${theme.spacings.xsmall};
       grid-template-areas: "info" "media" "highlight";
-      grid-template-rows: 35% 35% 30%;
+      grid-template-rows: 25% 40% 35%;
       grid-template-columns: 1fr;
       height: auto;
     `};
@@ -297,5 +306,53 @@ export const ShelfWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+  `}
+`
+
+export const LetsWorkTogetherSection = styled.section`
+  ${({ theme }) => css`
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem 0;
+    min-height: 300px;
+
+    h4 {
+      color: ${theme.colors.primary};
+    }
+  `}
+`
+
+export const LetsWorkTogetherLinkContainer = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    position: relative;
+
+    a {
+      display: inline-block;
+      color: ${theme.colors.text02};
+      font-weight: ${theme.font.bold};
+      font-size: ${theme.font.sizes.xxxlarge};
+      ${media.lessThan('medium')`
+        font-size: ${theme.font.sizes.xlarge};
+      `}
+      text-decoration: none;
+
+      &:hover {
+        &::after {
+          height: 4px;
+          border-bottom: 4px solid ${theme.colors.text02};
+          background: 0 0;
+          position: absolute;
+          display: block;
+          top: 80%;
+          left: 0;
+          width: 100%;
+          content: '';
+        }
+      }
+    }
   `}
 `

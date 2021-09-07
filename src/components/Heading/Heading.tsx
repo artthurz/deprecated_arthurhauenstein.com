@@ -3,13 +3,13 @@ import * as S from './Heading.styles'
 
 export type HeadingProps = {
   children: React.ReactNode
-  size?: 'xlarge' | 'large'
+  size?: 'xxlarge' | 'xlarge'
   textColor?: string
 } & React.HTMLAttributes<HTMLHeadingElement>
 
 const Heading = ({
   children,
-  size = 'xlarge',
+  size = 'xxlarge',
   textColor,
   ...props
 }: HeadingProps) => (

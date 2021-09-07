@@ -6,7 +6,7 @@ import * as SpaceStyles from '@/components/Space/Space.styles'
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     ${SpaceStyles.Wrapper} {
-      min-height: calc(100vh - calc(165px + 5.6rem));
+      min-height: 400px;
 
       ${media.lessThan('medium')`
         padding: 0 ${theme.spacings.xsmall};
@@ -20,8 +20,9 @@ export const Wrapper = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      top: 20%;
     } ;
-  `}
+  `};
 `
 
 export const Title = styled.h1`

@@ -13,6 +13,8 @@ import { MediaMatch } from '@/components/MediaMatch'
 import useI18N from '@/hooks/usei18n'
 import { i18n } from '@/i18n/protocols'
 
+import { ArrowRightShort as ArrowRightIcon } from '@styled-icons/bootstrap/ArrowRightShort'
+
 import NotebookAndPhoneImage from '../../public/img/homePage/notebookAndPhone.svg'
 
 import ReactNativeIcon from '../../public/img/technologies/reactnative.svg'
@@ -251,6 +253,7 @@ const Home: NextPage = () => {
               <S.ShelfWrapper
                 data-aos="zoom-in-left"
                 {...Animations.baseAosAnimation}
+                data-aos-duration="1000"
               >
                 <CardShelf cards={technologies} />
               </S.ShelfWrapper>
@@ -258,6 +261,22 @@ const Home: NextPage = () => {
           </S.Stack>
         </S.StackSectionDelimiter>
       </S.StackSection>
+
+      <S.LetsWorkTogetherSection>
+        <h4 data-aos="fade-down" {...Animations.baseAosAnimation}>
+          {i18n.t('need_a_developer')}
+        </h4>
+        <S.LetsWorkTogetherLinkContainer
+          data-aos="slide-right"
+          data-aos-offset="10"
+          {...Animations.baseAosAnimation}
+          data-aos-duration="1000"
+        >
+          <a href="/contact">
+            {i18n.t('lets_work_together')} <ArrowRightIcon width={60} />
+          </a>
+        </S.LetsWorkTogetherLinkContainer>
+      </S.LetsWorkTogetherSection>
     </S.Wrapper>
   )
 }

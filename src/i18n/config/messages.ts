@@ -7,10 +7,10 @@ const messages: MessageFile = {
     contact: 'Contato',
     open_menu: 'Abrir menu',
     close_menu: 'Fechar menu',
-    fullstack: 'Fullstack Engineer',
-    presentation: 'Olá, eu sou Arthur',
+    fullstack: 'Desenvolvedor Web, Mobile e Backend',
+    presentation: 'Olá, sou o Arthur',
     presentation_description:
-      'Um desenvolvedor que é entusiasta por novas tecnologias, apaixonado pelo ecosistema Javascript e conceitos de UI design!',
+      'Nos últimos 5 anos, como desenvolvedor, trabalhei com grandes empresas para ajudá-las a alcançar todo o seu potencial e atrair novos clientes por meio da tecnologia.',
     years_experience: 'anos de experiência',
     projects_developed: 'projetos desenvolvidos',
     completed_courses: 'cursos concluídos',
@@ -66,7 +66,9 @@ const messages: MessageFile = {
       'Atualmente trabalho como Engenheiro Frontend para a Consultoria CBYK, alocado no Banco Crefisa de São Paulo/SP, atuando no squad de Canais Digitais desenvolvendo o Internet Banking em React e o aplicativo Crefisa Mais em React Native. Focado em projetos, já atuei desenvolvendo o PIX, Saque Digital e Push Notifications.',
     arthur_front_alt: 'Minha foto olhando para a frente',
     in_construction: 'Esta página está em construção!',
-    my_stack: 'Tecnologias com que trabalho'
+    my_stack: 'Tecnologias com que trabalho',
+    need_a_developer: 'PRECISA DE UM DESENVOLVEDOR?',
+    lets_work_together: 'Vamos trabalhar juntos'
   },
   en: {
     home: 'Home',
@@ -74,10 +76,9 @@ const messages: MessageFile = {
     contact: 'Contact',
     open_menu: 'Open menu',
     close_menu: 'Close menu',
-    fullstack: 'Fullstack Engineer',
+    fullstack: 'Web, Mobile and Backend Developer',
     presentation: "Hi, i'm Arthur",
-    presentation_description:
-      'A developer who is enthusiastic about new technologies, passionate about Javascript ecosystem and UI design concepts!',
+    presentation_description: `Over the past 5 years, as a developer, I've worked with big companies to successfully help them reach their full potential and  attract new customers through technology.`,
     years_experience: 'years of experience',
     projects_developed: 'projects developed',
     completed_courses: 'completed courses',
@@ -134,7 +135,9 @@ const messages: MessageFile = {
       'I currently work as a Frontend Engineer for CBYK Consulting, allocated at Crefisa Bank of São Paulo/SP, working in the Digital Channels squad developing Internet Banking in React and the Crefisa Mais application in React Native. Focused on projects, I have worked on PIX, Digital Withdraw and Push Notifications.',
     arthur_front_alt: 'My photo facing forward',
     in_construction: 'This page is under construction!',
-    my_stack: 'Technologies I work with'
+    my_stack: 'Technologies I work with',
+    need_a_developer: 'NEED A DEVELOPER?',
+    lets_work_together: 'Let`s work together'
   },
   es: {
     home: 'Home',
@@ -142,10 +145,10 @@ const messages: MessageFile = {
     contact: 'Contacto',
     open_menu: 'Abrir menú',
     close_menu: 'Cerrar menú',
-    fullstack: 'Ingeniero Fullstack',
+    fullstack: 'Desarrolladora Web, Móvil y Backend',
     presentation: 'Hola, soy Arthur',
     presentation_description:
-      '¡Un desarrollador entusiasta de las nuevas tecnologías, apasionado por el ecosistema Javascript y los conceptos de diseño de UI!',
+      'Durante los últimos 5 años, como desarrollador, he trabajado con grandes empresas para ayudarlas con éxito a alcanzar su máximo potencial y atraer nuevos clientes a través de la tecnología.',
     years_experience: 'años de experiencia',
     projects_developed: 'proyectos desarrollados',
     completed_courses: 'Courses completados',
@@ -202,7 +205,9 @@ const messages: MessageFile = {
       'Actualmente trabajo como Ingeniero Frontend para CBYK Consulting, adscrito en Crefisa Bank de São Paulo / SP, trabajando en el equipo de Canales Digitales desarrollando Banca por Internet en React y la aplicación Crefisa Mais en React Native. Enfocado a proyectos, he trabajado en PIX, Digital Withdraw y Push Notifications.',
     arthur_front_alt: 'Mi foto mirando hacia adelante',
     in_construction: '¡Esta página esta en construcción!',
-    my_stack: 'Tecnologías con las que trabajo'
+    my_stack: 'Tecnologías con las que trabajo',
+    need_a_developer: '¿NECESITA UN DESARROLLADOR?',
+    lets_work_together: 'Trabajemos juntos'
   }
 } as const
 
