@@ -234,10 +234,11 @@ export const AboutMeSectionDelimiter = styled.div`
     grid-template-columns: 50% 50%;
     grid-template-areas: 'aboutMe aboutMe';
     grid-template-rows: auto auto;
-    padding: ${theme.spacings.medium} ${theme.spacings.medium};
+    padding: ${theme.spacings.medium} ${theme.spacings.medium}
+      ${theme.spacings.xxxlarge} ${theme.spacings.medium};
 
     ${media.lessThan('tablet')`
-      padding: ${theme.spacings.xsmall} ${theme.spacings.xsmall};
+      padding: ${theme.spacings.xsmall} ${theme.spacings.xsmall} ${theme.spacings.xxxlarge} ${theme.spacings.xsmall};
       grid-template-areas: "aboutMe";
       grid-template-columns: 1fr;
     `};
@@ -295,6 +296,7 @@ export const History = styled.article`
     padding: ${theme.spacings.medium};
     background: ${theme.colors.background02};
     border-radius: ${theme.border.radius};
+    height: 100%;
 
     ${media.lessThan('mobile')`
       padding: ${theme.spacings.small} ${theme.spacings.xsmall};
