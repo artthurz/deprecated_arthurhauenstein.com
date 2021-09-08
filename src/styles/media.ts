@@ -7,6 +7,7 @@ type customBreakpoints =
   | 'tabletlarge'
   | 'tablet'
   | 'mobile'
+  | 'mobilesmall'
 
 const customMedia = generateMedia({
   fourk: '2160px',
@@ -14,7 +15,8 @@ const customMedia = generateMedia({
   hd: '1270px',
   tabletlarge: '1024px',
   tablet: '769px',
-  mobile: '375px'
+  mobile: '414px',
+  mobilesmall: '375px'
 })
 
 export default customMedia

@@ -86,7 +86,7 @@ const LightTheme = {
     footer: 'rgba(255,255,255, 0.5)',
     text: '#b7b7c3',
     text02: '#0f141e',
-    text03: '#878a8f',
+    text03: '#0f141e',
     red: '#D92E3F',
     primary: '#1bb3e0',
     primary01: '#5fc9e9',

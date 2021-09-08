@@ -113,19 +113,28 @@ export const PhotoContainer = styled.div`
   background-size: auto 100%;
   background-position: top 0 right 15%;
 
-  ${media.lessThan('mobile')`
-      max-height: none;
-      background-position: top 0 right 0;
-      background-size: auto 60%;
-  `}
-
   ${media.lessThan('tabletlarge')`
       margin-top: 50px;
       background-position: top 0 right -120px;
   `}
 
+  ${media.lessThan('tablet')`
+      background-position: top 0 right 15%;
+      background-size: auto 90%;
+  `}
+
+  ${media.lessThan('mobile')`
+      background-position: top 0 right -50px;
+      margin-top: 20px;
+  `}
+
+  ${media.lessThan('mobilesmall')`
+      background-position: top 0 right -100px;
+      margin-top: 30px;
+  `}
+
   ${media.greaterThan('tabletlarge')`
-      background-position: top -20px right 0;
+      background-position: top -20px right 10px;
       min-height: 1120px;
   `}
 
