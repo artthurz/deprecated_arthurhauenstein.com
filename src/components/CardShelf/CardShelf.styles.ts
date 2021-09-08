@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
+import media from '@/styles/media'
 
 const imageModifiers = {
-  small: () => css`
+  mobile: () => css`
     grid-gap: 3rem;
     grid-template-areas: '1 2';
   `,
-  medium: () => css`
+  tablet: () => css`
     grid-gap: 4rem;
     grid-template-areas: '1 2 3';
   `,
@@ -23,17 +23,17 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  ${media.lessThan('medium')`
+  ${media.lessThan('tablet')`
       padding: 0.4rem;
   `};
 
   ${imageModifiers.large()};
 
-  ${media.lessThan('medium')`
-      ${imageModifiers.small()};
+  ${media.lessThan('tablet')`
+      ${imageModifiers.mobile()};
   `};
 
-  ${media.between('medium', 'large')`
-      ${imageModifiers.medium()};
+  ${media.between('tablet', 'hd')`
+      ${imageModifiers.tablet()};
   `};
 `

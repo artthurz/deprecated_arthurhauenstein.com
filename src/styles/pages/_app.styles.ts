@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
+import media from '@/styles/media'
 
 export const Container = styled.div`
   width: 100%;
@@ -20,7 +20,7 @@ export const Main = styled.main`
   flex: 1;
   min-height: calc(100vh - calc(165px + 5.6rem));
 
-  ${media.lessThan('medium')`
+  ${media.lessThan('tablet')`
       min-height: calc(100vh - calc(130px + 2.4rem));
   `};
 `

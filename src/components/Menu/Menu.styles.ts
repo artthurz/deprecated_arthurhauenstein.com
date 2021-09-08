@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
+import media from '@/styles/media'
 
 import MediaMatch from '@/components/MediaMatch/MediaMatch'
 import * as Select from '@/components/Select/Select.styles'
@@ -15,7 +15,7 @@ export const Wrapper = styled.menu`
     z-index: ${theme.layers.alwaysOnTop};
     padding: ${theme.spacings.small} ${theme.spacings.medium};
 
-    ${media.lessThan('medium')`
+    ${media.lessThan('tablet')`
       padding: ${theme.spacings.xsmall};
       justify-content: space-between;
     `};
@@ -69,7 +69,7 @@ export const MenuGroup = styled.div`
   align-items: center;
   justify-content: center;
   flex: 1;
-  ${media.greaterThan('medium')`
+  ${media.greaterThan('tablet')`
       margin-right: 7rem;
   `}
 
@@ -93,11 +93,11 @@ export const IconWrapper = styled.div`
 export const SwitchWrapper = styled.div`
   cursor: pointer;
 
-  ${media.greaterThan('medium')`
+  ${media.greaterThan('tablet')`
       margin-right: 2rem;
   `}
 
-  ${media.lessThan('medium')`
+  ${media.lessThan('tablet')`
       margin-top: 2rem;
   `}
 `

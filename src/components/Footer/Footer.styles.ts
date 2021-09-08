@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
+import media from '@/styles/media'
 
 export const Wrapper = styled.footer`
   ${({ theme }) => css`
@@ -11,7 +11,7 @@ export const Wrapper = styled.footer`
     height: 8rem;
     width: 100%;
 
-    ${media.lessThan('medium')`
+    ${media.lessThan('tablet')`
       height: 6rem;
     `}
   `}

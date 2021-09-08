@@ -1,6 +1,5 @@
-import NextImage from 'next/image'
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
+import media from '../media'
 
 import * as HighlightBoxStyles from '@/components/HighlightBox/HighlightBox.styles'
 import * as HeadingStyles from '@/components/Heading/Heading.styles'
@@ -28,17 +27,6 @@ export const InfoGroup = styled.div`
   grid-area: info;
 `
 
-export const MediaGroup = styled.div`
-  grid-area: media;
-  justify-self: center;
-  position: relative;
-
-  ${media.lessThan('medium')`
-    width: 20em;
-    height: 20em;
-  `}
-`
-
 export const Job = styled.h4`
   ${({ theme }) => css`
     color: ${theme.colors.primary};
@@ -47,7 +35,7 @@ export const Job = styled.h4`
     margin-bottom: ${theme.spacings.small};
     margin-top: 9rem;
 
-    ${media.lessThan('medium')`
+    ${media.lessThan('tablet')`
       margin-top: ${theme.spacings.medium};
     `}
   `}
@@ -56,7 +44,6 @@ export const Job = styled.h4`
 export const PresentationWrapper = styled.div`
   ${({ theme }) => css`
     margin-bottom: ${theme.spacings.xsmall};
-    display: inline-block;
   `}
 `
 
@@ -66,10 +53,11 @@ export const Presentation = styled.h1`
     overflow: hidden;
     display: inline-block;
     font-size: ${theme.font.sizes.xxxlarge};
-    ${media.lessThan('medium')`
+    ${media.lessThan('tablet')`
         font-size: ${theme.font.sizes.xlarge};
     `}
-    z-index:25;
+    max-width: fit-content;
+    z-index: 25;
     font-weight: ${theme.font.bold};
     border-right: 0.15em solid ${theme.colors.white}; /* The typwriter cursor */
     white-space: nowrap;
@@ -100,24 +88,45 @@ export const Description = styled.h3`
     color: ${theme.colors.text03};
     font-size: ${theme.font.sizes.large};
     font-weight: ${theme.font.normal};
-    ${media.lessThan('medium')`
+    ${media.lessThan('tablet')`
       text-align: center;
+      font-size: ${theme.font.sizes.medium};
     `}
   `}
 `
-
-export const Photo = styled(NextImage)`
-  z-index: 2;
-`
-export const NotebookAndPhoneContainer = styled.div`
-  position: absolute;
-  top: 40px;
-  left: 0;
-  z-index: 1;
-`
-
 export const PhotoContainer = styled.div`
-  display: flex;
+  position: absolute;
+  display: block;
+  min-height: 600px;
+  height: calc(100vh - 97px);
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  background: url('/img/me/arthur_front.png');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: top 0 right 15%;
+
+  ${media.lessThan('mobile')`
+      max-height: none;
+      background-position: top 0 right 0;
+      background-size: auto 60%;
+  `}
+
+  ${media.lessThan('tabletlarge')`
+      margin-top: 50px;
+      background-position: top 0 right -120px;
+  `}
+
+  ${media.greaterThan('tabletlarge')`
+      background-position: top -20px right 0;
+      min-height: 1120px;
+  `}
+
+  ${media.greaterThan('fullhd')`
+      background-position: top 0 right 20%;
+  `}
 `
 
 export const HighlightGroup = styled.div`
@@ -132,7 +141,7 @@ export const HighlightGroup = styled.div`
     display: flex;
     flex-direction: row;
 
-    ${media.lessThan('huge')`
+    ${media.lessThan('hd')`
       margin: ${theme.spacings.xsmall} 0;
 
       ${HighlightBoxStyles.Wrapper} {
@@ -141,7 +150,7 @@ export const HighlightGroup = styled.div`
 
     `}
 
-    ${media.lessThan('medium')`
+    ${media.lessThan('tablet')`
       margin: ${theme.spacings.xxlarge} 0;
       padding-top: ${theme.spacings.xlarge};
       place-self: center;
@@ -159,38 +168,42 @@ export const IntroductionSection = styled.section`
   overflow: hidden;
   min-height: 600px;
   height: calc(100vh - 97px);
-  ${media.lessThan('medium')`
+  ${media.lessThan('tablet')`
       height: auto;
   `};
 `
 
 export const IntroductionSectionDelimiter = styled.div`
   ${({ theme }) => css`
+    z-index: 2;
     max-width: ${theme.grid.container};
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 70% 30%;
     grid-template-areas:
       'info media'
-      'highlight media';
+      'highlight highlight';
     grid-template-rows: 30% 70%;
     padding: ${theme.spacings.medium} ${theme.spacings.medium};
     min-height: 600px;
+    overflow: hidden;
 
-    ${media.lessThan('large')`
+    ${media.lessThan('hd')`
       grid-template-rows: 40% 60%;
     `};
 
-    ${media.lessThan('medium')`
+    ${media.lessThan('tablet')`
       padding: ${theme.spacings.xsmall};
-      grid-template-areas: "info" "media" "highlight";
-      grid-template-rows: 33% 32% 35%;
+      grid-template-areas: "media" "info" "highlight";
+      grid-template-rows: 20% 30% 50%;
       grid-template-columns: 1fr;
+      min-height: 800px;
       height: auto;
     `};
   `}
 `
 
 export const AboutMeSection = styled.section`
+  z-index: 2;
   width: 100%;
   display: flex;
   align-items: center;
@@ -209,7 +222,7 @@ export const AboutMeSectionDelimiter = styled.div`
     grid-template-rows: auto auto;
     padding: ${theme.spacings.medium} ${theme.spacings.medium};
 
-    ${media.lessThan('medium')`
+    ${media.lessThan('tablet')`
       padding: ${theme.spacings.xsmall} ${theme.spacings.xsmall};
       grid-template-areas: "aboutMe";
       grid-template-columns: 1fr;
@@ -230,7 +243,7 @@ export const StackSectionDelimiter = styled.div`
 
     padding: ${theme.spacings.medium} ${theme.spacings.medium};
 
-    ${media.lessThan('medium')`
+    ${media.lessThan('tablet')`
       padding: ${theme.spacings.xsmall} ${theme.spacings.xsmall};
     `};
   `}
@@ -269,7 +282,7 @@ export const History = styled.article`
     background: ${theme.colors.background02};
     border-radius: ${theme.border.radius};
 
-    ${media.lessThan('small')`
+    ${media.lessThan('mobile')`
       padding: ${theme.spacings.small} ${theme.spacings.xsmall};
     `}
   `}
@@ -282,7 +295,7 @@ export const Paragraph = styled.p`
     font-size: 1.8rem;
     text-align: justify;
 
-    ${media.lessThan('small')`
+    ${media.lessThan('mobile')`
       font-size: 1.4rem;
     `}
   `}
@@ -329,7 +342,7 @@ export const LetsWorkTogetherSection = styled.section`
     justify-content: center;
     padding: 10rem 0;
     min-height: 300px;
-    ${media.lessThan('medium')`
+    ${media.lessThan('tablet')`
         min-height: 150px;
       `}
 
@@ -349,7 +362,7 @@ export const LetsWorkTogetherLinkContainer = styled.div`
       color: ${theme.colors.text02};
       font-weight: ${theme.font.bold};
       font-size: ${theme.font.sizes.xxxlarge};
-      ${media.lessThan('medium')`
+      ${media.lessThan('tablet')`
         font-size: ${theme.font.sizes.mediumlarge};
       `}
       text-decoration: none;
@@ -372,7 +385,7 @@ export const LetsWorkTogetherLinkContainer = styled.div`
 `
 export const ArrowRightIcon = styled(ArrowRightShort)`
   width: 60px;
-  ${media.lessThan('medium')`
+  ${media.lessThan('tablet')`
       width: 40px;
   `}
 `

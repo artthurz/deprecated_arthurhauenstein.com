@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
+import media from '@/styles/media'
 
 import * as SpaceStyles from '@/components/Space/Space.styles'
 
@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
     ${SpaceStyles.Wrapper} {
       min-height: 400px;
 
-      ${media.lessThan('medium')`
+      ${media.lessThan('tablet')`
         padding: 0 ${theme.spacings.xsmall};
         min-height: calc(100vh - calc(130px + 2.4rem));
       `};

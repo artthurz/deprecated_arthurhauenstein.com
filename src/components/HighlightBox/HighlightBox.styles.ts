@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
+import media from '@/styles/media'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -18,6 +18,7 @@ export const Ellipse = styled.div`
     min-width: 8rem;
     min-height: 8rem;
     margin-right: ${theme.spacings.xsmall};
+    margin-left: ${theme.spacings.small};
     transition: all 0.5s ease;
 
     &:hover {
@@ -30,14 +31,14 @@ export const Ellipse = styled.div`
       }
     }
 
-    ${media.lessThan('huge')`
+    ${media.lessThan('hd')`
       width: 7rem;
       height: 7rem;
       min-width: 7rem;
       min-height: 7rem;
     `}
 
-    ${media.lessThan('medium')`
+    ${media.lessThan('tablet')`
       width: 6rem;
       height: 6rem;
       min-width: 6rem;
@@ -53,7 +54,7 @@ export const PrimaryText = styled.h2`
     font-weight: ${theme.font.bold};
     transition: all 0.5s ease;
 
-    ${media.lessThan('medium')`
+    ${media.lessThan('tablet')`
       font-size: ${theme.font.sizes.large};
     `}
   `}
@@ -65,7 +66,7 @@ export const SecondaryText = styled.h5`
     font-size: ${theme.font.sizes.medium};
     font-weight: ${theme.font.light};
 
-    ${media.lessThan('medium')`
+    ${media.lessThan('tablet')`
       font-size: ${theme.font.sizes.small};
     `}
   `}

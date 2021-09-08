@@ -134,7 +134,7 @@ const Home: NextPage = () => {
             </S.Description>
           </S.InfoGroup>
 
-          <S.HighlightGroup>
+          <S.HighlightGroup data-aos="fade-up" {...Animations.baseAosAnimation}>
             <HighlightBox
               primaryText="+5"
               secondaryText={i18n.t('years_experience')}
@@ -148,25 +148,12 @@ const Home: NextPage = () => {
               secondaryText={i18n.t('projects_developed')}
             />
           </S.HighlightGroup>
-
-          <S.MediaGroup
-            data-aos="fade-up"
-            data-aos-offset="50"
-            {...Animations.baseAosAnimation}
-          >
-            <S.PhotoContainer>
-              <S.Photo
-                src="/img/me/arthur_front.png"
-                alt={i18n.t('arthur_front_alt')}
-                width={521}
-                height={694}
-              />
-              <S.NotebookAndPhoneContainer>
-                <S.NotebookAndPhoneImage key="react" title="React" />
-              </S.NotebookAndPhoneContainer>
-            </S.PhotoContainer>
-          </S.MediaGroup>
         </S.IntroductionSectionDelimiter>
+        <S.PhotoContainer
+          data-aos="fade-up"
+          data-aos-offset="50"
+          {...Animations.baseAosAnimation}
+        />
       </S.IntroductionSection>
 
       <S.AboutMeSection>
@@ -206,7 +193,7 @@ const Home: NextPage = () => {
                   </S.Paragraph>
                 </S.History>
               </S.HistoryWrapper>
-              <MediaMatch display="flex" greaterThan="medium">
+              <MediaMatch display="flex" greaterThan="tablet">
                 <S.TimelineWrapper>
                   <Timeline
                     data-aos="zoom-in-left"

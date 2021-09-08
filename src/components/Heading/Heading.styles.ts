@@ -1,5 +1,5 @@
 import styled, { css, DefaultTheme } from 'styled-components'
-import media from 'styled-media-query'
+import media from '@/styles/media'
 
 import { HeadingProps } from '.'
 
@@ -9,14 +9,14 @@ const wrapperModifiers = {
   xxlarge: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.xxlarge};
 
-    ${media.lessThan('medium')`
+    ${media.lessThan('tablet')`
       font-size: ${theme.font.sizes.large};
     `}
   `,
   xlarge: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.xlarge};
 
-    ${media.lessThan('medium')`
+    ${media.lessThan('tablet')`
       font-size: ${theme.font.sizes.large};
     `}
   `

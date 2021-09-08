@@ -42,7 +42,7 @@ const Menu = () => {
     <S.Wrapper>
       <Logo hideOnMobile />
 
-      <MediaMatch className="flex" greaterThan="medium">
+      <MediaMatch className="flex" greaterThan="tablet">
         <S.MenuGroup>
           <Link href="/">
             <S.MenuLink isActive={pathname === '/'} data-testid="home-link">
@@ -68,7 +68,7 @@ const Menu = () => {
         </S.MenuGroup>
       </MediaMatch>
 
-      <MediaMatch display="contents" greaterThan="medium">
+      <MediaMatch display="contents" greaterThan="tablet">
         <S.SwitchWrapper>
           <Switch
             checked={theme === 'dark'}
@@ -77,7 +77,7 @@ const Menu = () => {
         </S.SwitchWrapper>
       </MediaMatch>
 
-      <MediaMatch display="contents" greaterThan="medium">
+      <MediaMatch display="contents" greaterThan="tablet">
         <Select
           ariaLabel={i18n.t('language')}
           initialValue={LanguageResource[locale as Language]}
@@ -86,7 +86,7 @@ const Menu = () => {
         />
       </MediaMatch>
 
-      <MediaMatch lessThan="medium">
+      <MediaMatch lessThan="tablet">
         <S.IconWrapper>
           <MenuIcon
             aria-label={i18n.t('open_menu')}

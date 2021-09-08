@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
+import media from '@/styles/media'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -29,7 +29,7 @@ export const Wrapper = styled.div`
       cursor: pointer;
       transition: transform 0s, box-shadow 0s;
     }
-    ${media.lessThan('medium')`
+    ${media.lessThan('tablet')`
       padding: 0.4rem;
       margin: 0;
       width: 15rem;
