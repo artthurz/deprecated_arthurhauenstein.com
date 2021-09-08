@@ -103,7 +103,12 @@ export const PhotoContainer = styled.div`
   top: 0;
   left: 0;
 
-  background: url('/img/me/arthur_front.png');
+  ${({ theme }) => css`
+    background: url(${theme.type === 'dark'
+      ? '/img/me/arthur_front_dark.png'
+      : '/img/me/arthur_front_light.png'});
+  `}
+
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: top 0 right 15%;
