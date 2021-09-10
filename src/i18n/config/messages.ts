@@ -8,7 +8,7 @@ const messages: MessageFile = {
     open_menu: 'Abrir menu',
     close_menu: 'Fechar menu',
     fullstack: 'Desenvolvedor Web, Mobile e Backend',
-    presentation: 'Olá, sou o Arthur',
+    presentation: 'Olá, me chamo Arthur',
     presentation_description:
       'Nos últimos 5 anos, como desenvolvedor, trabalhei com grandes empresas para ajudá-las a alcançar todo o seu potencial e atrair novos clientes por meio da tecnologia.',
     years_experience: 'anos de experiência',
@@ -66,9 +66,12 @@ const messages: MessageFile = {
       'Atualmente trabalho como Engenheiro Frontend para a Consultoria CBYK, alocado no Banco Crefisa de São Paulo/SP, atuando no squad de Canais Digitais desenvolvendo o Internet Banking em React e o aplicativo Crefisa Mais em React Native. Focado em projetos, já atuei desenvolvendo o PIX, Saque Digital e Push Notifications.',
     arthur_front_alt: 'Minha foto olhando para a frente',
     in_construction: 'Esta página está em construção!',
-    my_stack: 'Tecnologias com que trabalho',
+    my_stack: 'Competências',
     need_a_developer: 'PRECISA DE UM DESENVOLVEDOR?',
-    lets_work_together: 'Vamos trabalhar juntos'
+    lets_work_together: 'Vamos trabalhar juntos',
+    contact_me: `Entre em contato comigo`,
+    contact_me_description: `Estas são as minhas principais redes sociais, não hesite em iniciar uma conversa. 😀`,
+    contact_me_image_alt: 'Eu na biblioteca da Univates prestes a me formar'
   },
   en: {
     home: 'Home',
@@ -77,7 +80,7 @@ const messages: MessageFile = {
     open_menu: 'Open menu',
     close_menu: 'Close menu',
     fullstack: 'Web, Mobile and Backend Developer',
-    presentation: "Hi, i'm Arthur",
+    presentation: "Hello, i'm Arthur",
     presentation_description: `Over the past 5 years, as a developer, I've worked with big companies to successfully help them reach their full potential and  attract new customers through technology.`,
     years_experience: 'years of experience',
     projects_developed: 'projects developed',
@@ -135,9 +138,13 @@ const messages: MessageFile = {
       'I currently work as a Frontend Engineer for CBYK Consulting, allocated at Crefisa Bank of São Paulo/SP, working in the Digital Channels squad developing Internet Banking in React and the Crefisa Mais application in React Native. Focused on projects, I have worked on PIX, Digital Withdraw and Push Notifications.',
     arthur_front_alt: 'My photo facing forward',
     in_construction: 'This page is under construction!',
-    my_stack: 'Technologies I work with',
+    my_stack: 'Skills',
     need_a_developer: 'NEED A DEVELOPER?',
-    lets_work_together: 'Let`s work together'
+    lets_work_together: 'Let`s work together',
+    contact_me: 'Contact me',
+    contact_me_description:
+      "These are my main social networks, don't hesitate to start a conversation.",
+    contact_me_image_alt: 'Me in the Univates library about to graduate'
   },
   es: {
     home: 'Home',
@@ -205,9 +212,13 @@ const messages: MessageFile = {
       'Actualmente trabajo como Ingeniero Frontend para CBYK Consulting, adscrito en Crefisa Bank de São Paulo / SP, trabajando en el equipo de Canales Digitales desarrollando Banca por Internet en React y la aplicación Crefisa Mais en React Native. Enfocado a proyectos, he trabajado en PIX, Digital Withdraw y Push Notifications.',
     arthur_front_alt: 'Mi foto mirando hacia adelante',
     in_construction: '¡Esta página esta en construcción!',
-    my_stack: 'Tecnologías con las que trabajo',
+    my_stack: 'Habilidades',
     need_a_developer: '¿NECESITA UN DESARROLLADOR?',
-    lets_work_together: 'Trabajemos juntos'
+    lets_work_together: 'Trabajemos juntos',
+    contact_me: 'Contáctame',
+    contact_me_description:
+      'Estas son mis principales redes sociales, no dudes en iniciar una conversación.',
+    contact_me_image_alt: 'Yo en la biblioteca de Univates a punto de graduarme'
   }
 } as const
 

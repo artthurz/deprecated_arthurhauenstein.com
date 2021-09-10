@@ -10,6 +10,7 @@ export const Wrapper = styled.footer`
     padding: 0 ${theme.spacings.medium};
     height: 8rem;
     width: 100%;
+    z-index: 1;
 
     ${media.lessThan('tablet')`
       height: 6rem;

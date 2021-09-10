@@ -14,6 +14,8 @@ import TypescriptIconImport from '../../../public/img/technologies/typescript.sv
 import MongoDBIconImport from '../../../public/img/technologies/mongo.svg'
 import DockerIconImport from '../../../public/img/technologies/docker.svg'
 import PostgreSQLIconImport from '../../../public/img/technologies/postgresql.svg'
+import HtmlIconImport from '../../../public/img/technologies/html.svg'
+import CssIconImport from '../../../public/img/technologies/css.svg'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -52,9 +54,9 @@ export const Presentation = styled.h1`
     color: ${theme.colors.text02};
     overflow: hidden;
     display: inline-block;
-    font-size: ${theme.font.sizes.xxxlarge};
+    font-size: ${theme.font.sizes.xxlarge};
     ${media.lessThan('tablet')`
-        font-size: ${theme.font.sizes.xlarge};
+        font-size: ${theme.font.sizes.large};
     `}
     max-width: fit-content;
     z-index: 25;
@@ -104,7 +106,7 @@ export const PhotoContainer = styled.div`
   left: 0;
 
   ${({ theme }) => css`
-    background: url(${theme.type === 'dark'
+    background-image: url(${theme.type === 'dark'
       ? '/img/me/arthur_front_dark.png'
       : '/img/me/arthur_front_light.png'});
   `}
@@ -115,11 +117,11 @@ export const PhotoContainer = styled.div`
 
   ${media.lessThan('tabletlarge')`
       margin-top: 50px;
-      background-position: top 0 right -120px;
+      background-position: top 0 left -320px;
   `}
 
   ${media.lessThan('tablet')`
-      background-position: top 0 right 15%;
+      background-position: top 0 left 15%;
       background-size: auto 90%;
   `}
 
@@ -129,17 +131,20 @@ export const PhotoContainer = styled.div`
   `}
 
   ${media.lessThan('mobilesmall')`
-      background-position: top 0 right -100px;
+      background-position: top 0 right -50px;
       margin-top: 30px;
   `}
 
-  ${media.greaterThan('tabletlarge')`
-      background-position: top -20px right 10px;
+  ${media.greaterThan('tablet')`
+      background-position: top -20px left -240px;
       min-height: 1120px;
   `}
 
+  ${media.greaterThan('hd')`
+      background-position: top 0 left -140px;
+  `}
   ${media.greaterThan('fullhd')`
-      background-position: top 0 right 20%;
+      background-position: top 0 left 20%;
   `}
 `
 
@@ -192,17 +197,21 @@ export const IntroductionSectionDelimiter = styled.div`
     z-index: 2;
     max-width: ${theme.grid.container};
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 40% 60%;
     grid-template-areas:
-      'info media'
-      'highlight highlight';
+      'media info'
+      'media highlight';
     grid-template-rows: 30% 70%;
     padding: ${theme.spacings.medium} ${theme.spacings.medium};
     min-height: 600px;
     overflow: hidden;
 
     ${media.lessThan('hd')`
+    grid-template-columns: 30% 70%;
       grid-template-rows: 40% 60%;
+      grid-template-areas:
+      'media info'
+      'highlight highlight';
     `};
 
     ${media.lessThan('tablet')`
@@ -435,6 +444,14 @@ export const DockerIcon = styled(DockerIconImport)`
   height: 90px;
 `
 export const PostgreSQLIcon = styled(PostgreSQLIconImport)`
+  width: 90px;
+  height: 90px;
+`
+export const HtmlIcon = styled(HtmlIconImport)`
+  width: 90px;
+  height: 90px;
+`
+export const CssIcon = styled(CssIconImport)`
   width: 90px;
   height: 90px;
 `

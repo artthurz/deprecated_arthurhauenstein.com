@@ -15,7 +15,7 @@ const ThemeStatic = {
     medium: 700,
     bold: 900,
     sizes: {
-      xsmall: '0.8rem',
+      xsmall: '1rem',
       small: '1.4rem',
       medium: '1.6rem',
       mediumlarge: '2rem',

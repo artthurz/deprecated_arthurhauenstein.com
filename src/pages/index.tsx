@@ -102,14 +102,20 @@ const technologies: React.ReactNode[] = [
   <Card key="typescript" shadowColor="#01ADD7" title="TypeScript">
     <S.TypescriptIcon alt="Typescript" />
   </Card>,
+  <Card key="html" shadowColor="#E44E28" title="HTML">
+    <S.HtmlIcon alt="HTML" />
+  </Card>,
+  <Card key="css" shadowColor="#2B51E5" title="CSS">
+    <S.CssIcon alt="CSS" />
+  </Card>,
+  <Card key="postgresql" shadowColor="#2D6294" title="PostgreSQL">
+    <S.PostgreSQLIcon alt="PostgreSQL" />
+  </Card>,
   <Card key="mongo" shadowColor="#419842" title="MongoDB">
     <S.MongoDBIcon alt="MongoDB" />
   </Card>,
   <Card key="docker" shadowColor="#ffffff" title="Docker">
     <S.DockerIcon alt="Docker" />
-  </Card>,
-  <Card key="postgresql" shadowColor="#2D6294" title="PostgreSQL">
-    <S.PostgreSQLIcon alt="PostgreSQL" />
   </Card>
 ]
 
@@ -123,7 +129,7 @@ const Home: NextPage = () => {
       <S.IntroductionSection>
         <S.IntroductionSectionDelimiter>
           <S.InfoGroup>
-            <S.Job data-aos="slide-right" {...Animations.baseAosAnimation}>
+            <S.Job data-aos="slide-left" {...Animations.baseAosAnimation}>
               {i18n.t('fullstack')}
             </S.Job>
             <S.PresentationWrapper>

@@ -13,7 +13,7 @@ const customMedia = generateMedia({
   fourk: '2160px',
   fullhd: '1920px',
   hd: '1270px',
-  tabletlarge: '1024px',
+  tabletlarge: '1025px',
   tablet: '769px',
   mobile: '414px',
   mobilesmall: '375px'

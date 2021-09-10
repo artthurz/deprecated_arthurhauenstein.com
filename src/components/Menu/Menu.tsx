@@ -9,15 +9,12 @@ import { Logo } from '@/components/Logo'
 import { MediaMatch } from '@/components/MediaMatch'
 import useI18N from '@/hooks/usei18n'
 import { Select } from '@/components/Select'
-import { Switch } from '@/components/Switch'
 import { Language, LanguageResource } from '@/i18n/language'
-import useTheme from '@/hooks/useTheme'
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false)
   const i18n = useI18N()
   const { pathname, push, locale } = useRouter()
-  const { handleToggleTheme, theme } = useTheme()
 
   const closeMenu = () => {
     setIsOpen(false)
@@ -69,15 +66,6 @@ const Menu = () => {
       </MediaMatch>
 
       <MediaMatch display="contents" greaterThan="tablet">
-        <S.SwitchWrapper>
-          <Switch
-            checked={theme === 'dark'}
-            onChange={() => handleToggleTheme()}
-          />
-        </S.SwitchWrapper>
-      </MediaMatch>
-
-      <MediaMatch display="contents" greaterThan="tablet">
         <Select
           ariaLabel={i18n.t('language')}
           initialValue={LanguageResource[locale as Language]}
@@ -108,12 +96,7 @@ const Menu = () => {
             onChange={onLanguageChange}
           />
         </S.SelectWrapper>
-        <S.SwitchWrapper>
-          <Switch
-            checked={theme === 'dark'}
-            onChange={() => handleToggleTheme()}
-          />
-        </S.SwitchWrapper>
+
         <S.MenuGroup>
           <Link href="/">
             <S.MenuLink
