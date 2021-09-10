@@ -9,9 +9,11 @@ export const Wrapper = styled.div`
   justify-content: center;
   min-height: calc(100vh - 100px - 80px);
   overflow: hidden;
-
-  ${media.lessThan('tablet')`
+  ${({ theme }) => css`
+    ${media.lessThan('tablet')`
       min-height: 100vh;
+      padding: ${theme.spacings.small};
+    `}
   `}
 `
 

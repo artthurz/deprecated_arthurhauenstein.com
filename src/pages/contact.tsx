@@ -22,7 +22,7 @@ const Contact = () => {
         </Heading>
 
         <S.Subtitle data-aos="slide-right" {...Animations.baseAosAnimation}>
-          {i18n.t('contact_me_description')} 😀
+          {i18n.t('contact_me_description')}
         </S.Subtitle>
         <S.BoxWrapper>
           <S.ContactBox>
