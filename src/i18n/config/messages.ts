@@ -71,7 +71,8 @@ const messages: MessageFile = {
     lets_work_together: 'Vamos trabalhar juntos',
     contact_me: `Entre em contato comigo`,
     contact_me_description: `Estas são as minhas principais redes sociais, não hesite em iniciar uma conversa. 😀`,
-    contact_me_image_alt: 'Eu na biblioteca da Univates prestes a me formar'
+    contact_me_image_alt: 'Eu na biblioteca da Univates prestes a me formar',
+    copy_to_clipboard: 'Copiado'
   },
   en: {
     home: 'Home',
@@ -144,7 +145,8 @@ const messages: MessageFile = {
     contact_me: 'Contact me',
     contact_me_description:
       "These are my main social networks, don't hesitate to start a conversation.",
-    contact_me_image_alt: 'Me in the Univates library about to graduate'
+    contact_me_image_alt: 'Me in the Univates library about to graduate',
+    copy_to_clipboard: 'Copied to clipboard'
   },
   es: {
     home: 'Home',
@@ -218,7 +220,9 @@ const messages: MessageFile = {
     contact_me: 'Contáctame',
     contact_me_description:
       'Estas son mis principales redes sociales, no dudes en iniciar una conversación.',
-    contact_me_image_alt: 'Yo en la biblioteca de Univates a punto de graduarme'
+    contact_me_image_alt:
+      'Yo en la biblioteca de Univates a punto de graduarme',
+    copy_to_clipboard: 'Copiado'
   }
 } as const
 
