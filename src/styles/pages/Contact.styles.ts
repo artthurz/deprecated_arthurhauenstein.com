@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   overflow: hidden;
   ${({ theme }) => css`
     ${media.lessThan('tabletlarge')`
-      min-height: 100vh;
+      min-height: 820px;
       padding: ${theme.spacings.small};
     `}
   `}
@@ -35,7 +35,8 @@ export const Background = styled.div`
   overflow: hidden;
   z-index: 1;
   ${media.lessThan('tabletlarge')`
-      min-height: 100vh;
+      min-height: 820px;
+      left: -300px;
   `}
 `
 export const Overlay = styled.div`
@@ -44,7 +45,7 @@ export const Overlay = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(31, 31, 36, 0.6);
+  background: rgba(31, 31, 36, 0.8);
   z-index: 2;
 `
 
@@ -59,7 +60,7 @@ export const Container = styled.div`
       grid-template-rows: auto auto auto;
     `}
 
-    ${media.lessThan('tablet')`
+    ${media.lessThan('tabletlarge')`
       margin: ${theme.spacings.small} 0;
     `}
   `}
@@ -102,7 +103,7 @@ export const ContactBox = styled.div`
     align-items: center;
     justify-items: center;
 
-    ${media.lessThan('tablet')`
+    ${media.lessThan('tabletlarge')`
       gap: ${theme.spacings.xsmall};
       grid-template-columns: 1fr;
       height: 100%;
