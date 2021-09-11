@@ -14,6 +14,10 @@ export const Wrapper = styled.div`
     ${media.lessThan('mobile')`
       height: 6rem;
     `}
+
+    @media (max-width: 280px) {
+      width: 15rem;
+    }
   `}
 `
 
@@ -46,6 +50,10 @@ const iconModifiers = {
 
     ${media.lessThan('mobile')`
       font-size: ${theme.font.sizes.xsmall};
+    `}
+
+    ${media.lessThan('mobilesmall')`
+      font-size: ${theme.font.sizes.xxsmall};
     `}
 
     @keyframes Disappear {
@@ -119,5 +127,13 @@ export const PreviewLink = styled.label`
     ${media.lessThan('mobile')`
       font-size: ${theme.font.sizes.xsmall};
     `}
+
+    ${media.lessThan('mobilesmall')`
+      font-size: ${theme.font.sizes.xxsmall};
+    `}
+
+    @media (max-width: 280px) {
+      display: none;
+    }
   `}
 `

@@ -109,5 +109,9 @@ export const ContactBox = styled.div`
       height: 100%;
       min-width: unset;
     `}
+
+    @media (max-width: 280px) {
+      width: 10rem;
+    }
   `}
 `
