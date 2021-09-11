@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   min-height: calc(100vh - 100px - 80px);
   overflow: hidden;
   ${({ theme }) => css`
-    ${media.lessThan('tablet')`
+    ${media.lessThan('tabletlarge')`
       min-height: 100vh;
       padding: ${theme.spacings.small};
     `}
