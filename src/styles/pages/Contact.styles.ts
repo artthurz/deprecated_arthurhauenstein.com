@@ -34,7 +34,7 @@ export const Background = styled.div`
   background: transparent;
   overflow: hidden;
   z-index: 1;
-  ${media.lessThan('tablet')`
+  ${media.lessThan('tabletlarge')`
       min-height: 100vh;
   `}
 `
