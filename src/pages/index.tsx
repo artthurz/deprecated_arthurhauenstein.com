@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Link from 'next/link'
 
 import * as S from '@/styles/pages/Home.styles'
 import * as Animations from '@/styles/animations'
@@ -247,9 +248,17 @@ const Home: NextPage = () => {
           {...Animations.baseAosAnimation}
           data-aos-duration="1000"
         >
-          <a href="/contact">
-            {i18n.t('lets_work_together')} <S.ArrowRightIcon />
-          </a>
+          <Link
+            href="/contact"
+            data-aos="slide-right"
+            data-aos-offset="10"
+            {...Animations.baseAosAnimation}
+            data-aos-duration="1000"
+          >
+            <S.LetsWorkTogetherText>
+              {i18n.t('lets_work_together')} <S.ArrowRightIcon />
+            </S.LetsWorkTogetherText>
+          </Link>
         </S.LetsWorkTogetherLinkContainer>
       </S.LetsWorkTogetherSection>
     </S.Wrapper>

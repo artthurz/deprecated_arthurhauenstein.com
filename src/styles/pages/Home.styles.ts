@@ -378,36 +378,37 @@ export const LetsWorkTogetherSection = styled.section`
 `
 
 export const LetsWorkTogetherLinkContainer = styled.div`
+  display: flex;
+  position: relative;
+`
+export const LetsWorkTogetherText = styled.h1`
   ${({ theme }) => css`
-    display: flex;
-    position: relative;
-
-    a {
-      display: inline-block;
-      color: ${theme.colors.text02};
-      font-weight: ${theme.font.bold};
-      font-size: ${theme.font.sizes.xxxlarge};
-      ${media.lessThan('tablet')`
+    display: inline-block;
+    cursor: pointer;
+    color: ${theme.colors.text02};
+    font-weight: ${theme.font.bold};
+    font-size: ${theme.font.sizes.xxxlarge};
+    ${media.lessThan('tablet')`
         font-size: ${theme.font.sizes.mediumlarge};
-      `}
-      text-decoration: none;
+    `}
+    text-decoration: none;
 
-      &:hover {
-        &::after {
-          height: 4px;
-          border-bottom: 4px solid ${theme.colors.text02};
-          background: 0 0;
-          position: absolute;
-          display: block;
-          top: 80%;
-          left: 0;
-          width: 100%;
-          content: '';
-        }
+    &:hover {
+      &::after {
+        height: 4px;
+        border-bottom: 4px solid ${theme.colors.text02};
+        background: 0 0;
+        position: absolute;
+        display: block;
+        top: 80%;
+        left: 0;
+        width: 100%;
+        content: '';
       }
     }
   `}
 `
+
 export const ArrowRightIcon = styled(ArrowRightShort)`
   width: 60px;
   ${media.lessThan('tablet')`
