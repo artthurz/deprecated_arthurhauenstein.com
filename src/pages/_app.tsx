@@ -24,9 +24,14 @@ function App({ Component, pageProps }: AppProps) {
             name="viewport"
             content="width=device-width, initial-scale=1, viewport-fit=cover"
           />
+          <meta name="author" content="Arthur Hauenstein" />
           <meta
             name="description"
             content="I`m a Fullstack Enginner and this is my personal page, where I will update my portfolio and bring news about myself."
+          />
+          <meta
+            name="keywords"
+            content="Arthur Hauenstein, Arthur, Hauenstein, Desenvolvedor, Engenheiro de Software, Software Engineer, Developer, Software, React, Node, Native, HTML, CSS, JavaScript, Typescript"
           />
           <title>Arthur Hauenstein</title>
           <link rel="shortcut icon" href="/img/icon.svg" />
