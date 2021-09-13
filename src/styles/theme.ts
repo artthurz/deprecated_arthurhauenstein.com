@@ -17,6 +17,7 @@ const ThemeStatic = {
     sizes: {
       xxsmall: '0.8rem',
       xsmall: '1rem',
+      msmall: '1.2rem',
       small: '1.4rem',
       medium: '1.6rem',
       mediumlarge: '2rem',
@@ -49,14 +50,13 @@ const DarkTheme = {
   ...ThemeStatic,
   type: 'dark',
   colors: {
-    background: '#1F1F24',
-    background02: '#35353D',
-    footer: '#35353D',
+    background: 'rgb(16, 18, 18)',
+    background02: 'rgb(20, 24, 26)',
     text: '#e1e1e6',
     text02: '#ffffff',
     text03: '#ffffff',
     red: '#D92E3F',
-    primary: '#1bb3e0',
+    primary: 'rgb(64, 203, 246)',
     primary01: '#5fc9e9',
     primary02: '#a3e0f2',
     black: '#1F1F24',
@@ -72,8 +72,17 @@ const DarkTheme = {
       'linear-gradient(270.03deg, #3B37FF 0.05%, rgba(59, 55, 255, 0) 98.15%)',
     gradient02:
       'linear-gradient(265.22deg, #5fc9e9 -1.83%, rgba(40, 245, 190, 0) 95.01%)',
-    gradient03: 'linear-gradient(83.89deg, #5fc9e9 2.81%, #3B37FF 97.94%)',
+    gradient03: `linear-gradient(45deg,
+        rgb(64, 203, 246),
+        rgb(130, 192, 65)
+      )`,
     gradient04: 'linear-gradient(333.93deg, #2f2f2f 0%, #35353D 100%)',
+    gradient05: 'linear-gradient(rgb(20, 24, 25), rgba(29, 41, 45, 0.4))',
+    textGradient: `-webkit-linear-gradient(
+        45deg,
+        rgb(64, 203, 246),
+        rgb(130, 192, 65)
+      );`,
     white: '#FFFFFF',
     gray: '#D4D4D4'
   }

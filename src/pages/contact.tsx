@@ -16,15 +16,15 @@ const Contact = () => {
 
   return (
     <S.Wrapper>
+      <img src="/img/homePage/circle-blur.svg" alt="Circle blur" />
       <S.Container>
         <Heading data-aos="slide-right" {...Animations.baseAosAnimation}>
           {i18n.t('contact_me')}
         </Heading>
-
         <S.Subtitle data-aos="slide-right" {...Animations.baseAosAnimation}>
           {i18n.t('contact_me_description')}
         </S.Subtitle>
-        <S.BoxWrapper>
+        <S.BoxWrapper data-aos="fade-up" {...Animations.baseAosAnimation}>
           <S.ContactBox>
             <ContactCard
               icon={<GithubIcon aria-label="Github Icon" />}
@@ -53,19 +53,7 @@ const Contact = () => {
           </S.ContactBox>
         </S.BoxWrapper>
       </S.Container>
-      <S.Background>
-        <S.BackgroundImage
-          data-aos="fade-up"
-          {...Animations.baseAosAnimation}
-          src="/img/me/arthur_gratuated.jpg"
-          alt={i18n.t('contact_me_image_alt')}
-          width={3840}
-          height={2160}
-          quality={75}
-          className="Image"
-        />
-        <S.Overlay />
-      </S.Background>
+      <img src="/img/homePage/circle-blur.svg" alt="Circle blur" />
     </S.Wrapper>
   )
 }

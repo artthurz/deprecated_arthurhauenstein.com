@@ -9,7 +9,6 @@ import { Heading } from '@/components/Heading'
 import { Card } from '@/components/Card'
 import { CardShelf } from '@/components/CardShelf'
 import { Achievement, Timeline } from '@/components/Timeline'
-import { Space } from '@/components/Space'
 import { MediaMatch } from '@/components/MediaMatch'
 import useI18N from '@/hooks/usei18n'
 import { i18n } from '@/i18n/protocols'
@@ -134,7 +133,10 @@ const Home: NextPage = () => {
               {i18n.t('fullstack')}
             </S.Job>
             <S.PresentationWrapper>
-              <S.Presentation>{i18n.t('presentation')}</S.Presentation>
+              <S.Presentation>
+                {i18n.t('presentation')}
+                <span> Arthur</span>
+              </S.Presentation>
             </S.PresentationWrapper>
             <S.Description data-aos="fade-up" {...Animations.baseAosAnimation}>
               {i18n.t('presentation_description')}
@@ -215,27 +217,25 @@ const Home: NextPage = () => {
       </S.AboutMeSection>
 
       <S.StackSection>
+        <img src="/img/homePage/circle-blur.svg" alt="Circle blur" />
         <S.StackSectionDelimiter>
-          <S.Stack>
-            <Heading
-              data-aos="slide-right"
-              data-aos-offset="10"
-              {...Animations.baseAosAnimation}
-              data-aos-duration="1000"
-            >
-              {i18n.t('my_stack')}
-            </Heading>
-            <Space stars={20}>
-              <S.ShelfWrapper
-                data-aos="zoom-in-left"
-                {...Animations.baseAosAnimation}
-                data-aos-duration="1000"
-              >
-                <CardShelf cards={technologies} />
-              </S.ShelfWrapper>
-            </Space>
-          </S.Stack>
+          <Heading
+            data-aos="slide-right"
+            data-aos-offset="10"
+            {...Animations.baseAosAnimation}
+            data-aos-duration="1000"
+          >
+            {i18n.t('my_stack')}
+          </Heading>
+          <S.ShelfWrapper
+            data-aos="zoom-in-left"
+            {...Animations.baseAosAnimation}
+            data-aos-duration="1000"
+          >
+            <CardShelf cards={technologies} />
+          </S.ShelfWrapper>
         </S.StackSectionDelimiter>
+        <img src="/img/homePage/circle-blur.svg" alt="Circle blur" />
       </S.StackSection>
 
       <S.LetsWorkTogetherSection>

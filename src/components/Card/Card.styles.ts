@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     position: relative;
     color: ${theme.colors.text02};
     font-weight: ${theme.font.bold};
-    background-color: ${theme.colors.background};
+    background-color: transparent;
     border-radius: 20px;
     padding: ${theme.spacings.xxsmall};
     width: 25rem;

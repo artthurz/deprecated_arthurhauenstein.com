@@ -8,7 +8,7 @@ const messages: MessageFile = {
     open_menu: 'Abrir menu',
     close_menu: 'Fechar menu',
     fullstack: 'Desenvolvedor Web, Mobile e Backend',
-    presentation: 'Olá, me chamo Arthur',
+    presentation: 'Olá, me chamo',
     presentation_description:
       'Nos últimos 5 anos, como desenvolvedor, trabalhei com grandes empresas para ajudá-las a alcançar todo o seu potencial e atrair novos clientes por meio da tecnologia.',
     years_experience: 'anos de experiência',
@@ -81,7 +81,7 @@ const messages: MessageFile = {
     open_menu: 'Open menu',
     close_menu: 'Close menu',
     fullstack: 'Web, Mobile and Backend Developer',
-    presentation: "Hello, i'm Arthur",
+    presentation: "Hello, i'm",
     presentation_description: `Over the past 5 years, as a developer, I've worked with big companies to successfully help them reach their full potential and  attract new customers through technology.`,
     years_experience: 'years of experience',
     projects_developed: 'projects developed',
@@ -155,7 +155,7 @@ const messages: MessageFile = {
     open_menu: 'Abrir menú',
     close_menu: 'Cerrar menú',
     fullstack: 'Desarrolladora Web, Móvil y Backend',
-    presentation: 'Hola, soy Arthur',
+    presentation: 'Hola, soy',
     presentation_description:
       'Durante los últimos 5 años, como desarrollador, he trabajado con grandes empresas para ayudarlas con éxito a alcanzar su máximo potencial y atraer nuevos clientes a través de la tecnología.',
     years_experience: 'años de experiencia',

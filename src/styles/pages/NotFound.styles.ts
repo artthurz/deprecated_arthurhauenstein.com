@@ -1,27 +1,53 @@
 import styled, { css } from 'styled-components'
 import media from '@/styles/media'
 
-import * as SpaceStyles from '@/components/Space/Space.styles'
-
 export const Wrapper = styled.div`
   ${({ theme }) => css`
-    ${SpaceStyles.Wrapper} {
-      min-height: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    min-height: calc(100vh - 100px - 80px);
 
-      ${media.lessThan('tablet')`
+    ${media.lessThan('tabletlarge')`
         padding: 0 ${theme.spacings.xsmall};
-        min-height: calc(100vh - calc(130px + 2.4rem));
-      `};
-    }
+        min-height: 620px;
+    `};
 
-    ${SpaceStyles.ChildrenWrapper} {
+    img {
+      max-width: 100%;
+      user-select: none;
       position: absolute;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      top: 20%;
-    } ;
+
+      &:first-child {
+        left: 700px;
+        bottom: -10%;
+
+        ${media.lessThan('tabletlarge')`
+        left: 400px;
+        bottom: 10%;
+      `}
+        ${media.lessThan('tablet')`
+        left: 200px;
+        bottom: 25%;
+      `}
+      }
+      &:last-child {
+        right: 600px;
+        top: 0;
+
+        ${media.lessThan('tabletlarge')`
+        right: 400px;
+        top: 600px;
+      `};
+        ${media.lessThan('tablet')`
+        right: 200px;
+        top: 0px;
+      `}
+      }
+    }
   `};
 `
 

@@ -27,6 +27,8 @@ export const Wrapper = styled.h2<WrapperProps>`
     color: ${textColor || theme.colors.text02};
     font-weight: ${theme.font.bold};
     z-index: 3;
+    line-height: 5.5rem;
+    letter-spacing: -0.04em;
 
     ${!!size && wrapperModifiers[size](theme)};
   `}

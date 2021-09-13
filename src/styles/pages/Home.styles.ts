@@ -6,7 +6,7 @@ import * as HeadingStyles from '@/components/Heading/Heading.styles'
 import * as MediaMatch from '@/components/MediaMatch/MediaMatch'
 
 import { ArrowRightShort } from '@styled-icons/bootstrap/ArrowRightShort'
-import NotebookAndPhoneImageImport from '../../../public/img/homePage/notebookAndPhone.svg'
+import NotebookAndPhoneImageImport from '../../../public/img/homePage/notebook-phone.svg'
 import ReactNativeIconImport from '../../../public/img/technologies/reactnative.svg'
 import ReactIconImport from '../../../public/img/technologies/react.svg'
 import NodeIconImport from '../../../public/img/technologies/node.svg'
@@ -56,7 +56,7 @@ export const Presentation = styled.h1`
     display: inline-block;
     font-size: ${theme.font.sizes.xxlarge};
     ${media.lessThan('tablet')`
-        font-size: ${theme.font.sizes.large};
+        font-size: ${theme.font.sizes.xlarge};
     `}
     max-width: fit-content;
     z-index: 25;
@@ -65,6 +65,9 @@ export const Presentation = styled.h1`
     white-space: nowrap;
     animation: typewriter 2s steps(44) 800ms 1 normal both,
       blinkTextCursor 800ms steps(44) infinite normal;
+
+    line-height: 5.5rem;
+    letter-spacing: -0.04em;
 
     @keyframes typewriter {
       from {
@@ -81,6 +84,12 @@ export const Presentation = styled.h1`
       to {
         border-right-color: transparent;
       }
+    }
+
+    span {
+      background: ${theme.colors.textGradient};
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   `}
 `
@@ -105,11 +114,7 @@ export const PhotoContainer = styled.div`
   top: 0;
   left: 0;
 
-  ${({ theme }) => css`
-    background-image: url(${theme.type === 'dark'
-      ? '/img/me/arthur_front_dark.png'
-      : '/img/me/arthur_front_light.png'});
-  `}
+  background-image: url(${'/img/me/arthur_front_dark.png'});
 
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -187,6 +192,9 @@ export const IntroductionSection = styled.section`
   overflow: hidden;
   min-height: 600px;
   height: calc(100vh - 97px);
+  ${({ theme }) => css`
+    background: ${theme.colors.gradient05};
+  `}
   ${media.lessThan('tablet')`
       height: auto;
   `};
@@ -232,7 +240,7 @@ export const AboutMeSection = styled.section`
   align-items: center;
   justify-content: center;
   ${({ theme }) => css`
-    background-color: ${theme.colors.black01};
+    background-color: ${theme.colors.background};
   `}
 `
 
@@ -255,10 +263,48 @@ export const AboutMeSectionDelimiter = styled.div`
 `
 
 export const StackSection = styled.section`
+  ${({ theme }) => css`
+    background: ${theme.colors.background};
+  `}
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    max-width: 100%;
+    user-select: none;
+    position: absolute;
+
+    &:first-child {
+      left: 700px;
+      bottom: -10%;
+
+      ${media.lessThan('tabletlarge')`
+          left: 400px;
+          bottom: 10%;
+        `}
+      ${media.lessThan('tablet')`
+          left: 200px;
+          bottom: 25%;
+        `}
+    }
+    &:last-child {
+      right: 600px;
+      top: 0;
+
+      ${media.lessThan('tabletlarge')`
+          right: 400px;
+          top: 600px;
+        `};
+      ${media.lessThan('tablet')`
+          right: 200px;
+          top: 0px;
+        `}
+    }
+  }
 `
 
 export const StackSectionDelimiter = styled.div`
@@ -270,6 +316,16 @@ export const StackSectionDelimiter = styled.div`
     ${media.lessThan('tablet')`
       padding: ${theme.spacings.xsmall} ${theme.spacings.xsmall};
     `};
+    grid-area: stack;
+    display: flex;
+    flex-direction: column;
+    margin-top: ${theme.spacings.xxlarge};
+    font-size: ${theme.font.sizes.msmall};
+
+    ${HeadingStyles.Wrapper} {
+      margin-bottom: ${theme.spacings.large};
+    }
+    z-index: 2;
   `}
 `
 
@@ -333,19 +389,6 @@ export const TimelineWrapper = styled.div`
     align-content: center;
     justify-content: center;
     padding: 0 ${theme.spacings.large};
-  `}
-`
-
-export const Stack = styled.section`
-  ${({ theme }) => css`
-    grid-area: stack;
-    display: flex;
-    flex-direction: column;
-    margin-top: ${theme.spacings.xxlarge};
-
-    ${HeadingStyles.Wrapper} {
-      margin-bottom: ${theme.spacings.large};
-    } ;
   `}
 `
 

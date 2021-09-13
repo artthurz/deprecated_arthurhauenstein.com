@@ -11,7 +11,7 @@ export const Wrapper = styled.menu`
     position: sticky;
     top: 0px;
     width: 100%;
-    background: ${theme.colors.background};
+    background: transparent;
     z-index: ${theme.layers.alwaysOnTop};
     padding: ${theme.spacings.small} ${theme.spacings.medium};
 

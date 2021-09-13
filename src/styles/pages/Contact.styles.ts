@@ -1,8 +1,7 @@
 import styled, { css } from 'styled-components'
 import media from '../media'
-import Image from 'next/image'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   position: relative;
   display: flex;
   align-items: center;
@@ -15,38 +14,39 @@ export const Wrapper = styled.div`
       padding: ${theme.spacings.small};
     `}
   `}
-`
 
-export const BackgroundImage = styled(Image)`
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`
-export const Background = styled.div`
-  padding: unset;
-  min-height: calc(100vh - 100px - 80px);
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  background: transparent;
-  overflow: hidden;
-  z-index: 1;
-  ${media.lessThan('tabletlarge')`
-      min-height: 820px;
-      left: -300px;
-  `}
-`
-export const Overlay = styled.div`
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(31, 31, 36, 0.8);
-  z-index: 2;
+  img {
+    max-width: 100%;
+    user-select: none;
+    position: absolute;
+
+    &:first-child {
+      left: 700px;
+      bottom: -10%;
+
+      ${media.lessThan('tabletlarge')`
+        left: 400px;
+        bottom: 10%;
+      `}
+      ${media.lessThan('tablet')`
+        left: 200px;
+        bottom: 25%;
+      `}
+    }
+    &:last-child {
+      right: 600px;
+      top: 0;
+
+      ${media.lessThan('tabletlarge')`
+        right: 400px;
+        top: 600px;
+      `};
+      ${media.lessThan('tablet')`
+        right: 200px;
+        top: 0px;
+      `}
+    }
+  }
 `
 
 export const Container = styled.div`
@@ -90,7 +90,7 @@ export const BoxWrapper = styled.div`
 
 export const ContactBox = styled.div`
   ${({ theme }) => css`
-    background: ${theme.colors.black01};
+    background: transparent;
     flex: 1;
     height: 40rem;
     max-height: 53rem;
