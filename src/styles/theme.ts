@@ -117,6 +117,12 @@ const LightTheme = {
       'linear-gradient(265.22deg, #5fc9e9 -1.83%, rgba(40, 245, 190, 0) 95.01%)',
     gradient03: 'linear-gradient(83.89deg, #5fc9e9 2.81%, #3B37FF 97.94%)',
     gradient04: 'linear-gradient(333.93deg, #2f2f2f 0%, #35353D 100%)',
+    gradient05: 'linear-gradient(rgb(20, 24, 25), rgba(29, 41, 45, 0.4))',
+    textGradient: `-webkit-linear-gradient(
+        45deg,
+        rgb(64, 203, 246),
+        rgb(130, 192, 65)
+      );`,
     white: '#ffffff',
     gray: '#D4D4D4'
   }
