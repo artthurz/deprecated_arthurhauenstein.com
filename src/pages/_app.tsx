@@ -39,10 +39,6 @@ function App({ Component, pageProps }: AppProps) {
           <link rel="manifest" href="/manifest.json" />
           <link rel="stylesheet" href="/css/aos.css" />
           <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-          />
-          <link
             rel="alternate"
             hrefLang="pt"
             href="https://arthurhauenstein.com/pt"
