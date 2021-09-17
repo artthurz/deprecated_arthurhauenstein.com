@@ -1,29 +1,29 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import * as S from './MenuItem.styles'
+import * as S from './NavItem.styles'
 
-export type MenuItemProps = {
+export type NavItemProps = {
   href: string
   title: string
   menuMobileIsOpen: boolean
 }
 
-const MenuItem = (props: MenuItemProps) => {
+const NavItem = (props: NavItemProps) => {
   const { pathname } = useRouter()
   const { href, title, menuMobileIsOpen } = props
 
   return (
     <Link href={href}>
-      <S.MenuLink
+      <S.Link
         isActive={pathname === href}
         menuMobileIsOpen={menuMobileIsOpen}
         key={title}
       >
-        <h1>{title} </h1>
-      </S.MenuLink>
+        {title}
+      </S.Link>
     </Link>
   )
 }
 
-export default MenuItem
+export default NavItem

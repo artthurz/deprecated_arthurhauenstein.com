@@ -9,7 +9,7 @@ import { MediaMatch } from '@/components/MediaMatch'
 import useI18N from '@/hooks/usei18n'
 import { Select } from '@/components/Select'
 import { Language, LanguageResource } from '@/i18n/language'
-import { MenuItem } from '@/components/MenuItem'
+import { NavItem } from '@/components/NavItem'
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -35,34 +35,34 @@ const Menu = () => {
     push(pathname, pathname, { locale: language })
   }
 
-  const MenuItems = () => (
-    <S.MenuGroup>
-      <MenuItem
+  const Navbar = () => (
+    <S.NavGroup>
+      <NavItem
         href="/"
         title={i18n.t('home')}
         menuMobileIsOpen={isOpen}
         key="home-link"
       />
-      <MenuItem
+      <NavItem
         href="/projects"
         title={i18n.t('projects')}
         menuMobileIsOpen={isOpen}
         key="projects-link"
       />
-      <MenuItem
+      <NavItem
         href="/contact"
         title={i18n.t('contact')}
         menuMobileIsOpen={isOpen}
         key="contact-link"
       />
-    </S.MenuGroup>
+    </S.NavGroup>
   )
 
   return (
     <S.Wrapper>
       <Logo hideOnMobile />
       <MediaMatch className="flex" greaterThan="tablet">
-        <MenuItems />
+        <Navbar />
       </MediaMatch>
 
       <MediaMatch display="contents" greaterThan="tablet">
@@ -97,7 +97,7 @@ const Menu = () => {
           />
         </S.SelectWrapper>
 
-        <MenuItems />
+        <Navbar />
       </S.MenuFull>
     </S.Wrapper>
   )

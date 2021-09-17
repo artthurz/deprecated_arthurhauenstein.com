@@ -34,7 +34,7 @@ export const Wrapper = styled.header`
   `}
 `
 
-export const MenuGroup = styled.nav`
+export const NavGroup = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,7 +56,7 @@ type MenuFullProps = {
   isOpen: boolean
 }
 
-export const MenuFull = styled.nav<MenuFullProps>`
+export const MenuFull = styled.div<MenuFullProps>`
   ${({ theme, isOpen }) => css`
     display: flex;
     flex-direction: column;
@@ -84,7 +84,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
       height: ${theme.spacings.medium};
     }
 
-    ${MenuGroup} {
+    ${NavGroup} {
       display: flex;
       align-items: center;
       justify-content: center;

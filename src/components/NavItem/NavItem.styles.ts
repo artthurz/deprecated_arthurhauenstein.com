@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components'
 import media from '@/styles/media'
 
-type MenuLinkProps = {
+type LinkProps = {
   isActive: boolean
   menuMobileIsOpen: boolean
 }
-export const MenuLink = styled.a<MenuLinkProps>`
+export const Link = styled.a<LinkProps>`
   ${({ theme, isActive, menuMobileIsOpen }) => css`
     position: fixed;
     flex-direction: column;
@@ -15,14 +15,12 @@ export const MenuLink = styled.a<MenuLinkProps>`
     cursor: pointer;
     position: relative;
     display: flex;
+    color: ${theme.colors.text02} !important;
+    font-size: ${theme.font.sizes.medium};
+    font-weight: ${theme.font.bold};
+    opacity: ${isActive ? 1 : 0.8};
+    text-decoration: none;
 
-    h1 {
-      color: ${theme.colors.text02} !important;
-      font-size: ${theme.font.sizes.medium};
-      font-weight: ${theme.font.bold};
-      opacity: ${isActive ? 1 : 0.8};
-      text-decoration: none;
-    }
     &::before {
       content: '';
       height: 2px;
@@ -50,10 +48,7 @@ export const MenuLink = styled.a<MenuLinkProps>`
     `}
 
     &:hover {
-      h1 {
-        display: flex;
-        opacity: 1;
-      }
+      opacity: 1;
     }
   `}
 `
