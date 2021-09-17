@@ -4,14 +4,14 @@ import media from '@/styles/media'
 import MediaMatch from '@/components/MediaMatch/MediaMatch'
 import * as Select from '@/components/Select/Select.styles'
 
-export const Wrapper = styled.menu`
+export const Wrapper = styled.header`
   ${({ theme }) => css`
     display: flex;
     align-items: center;
     position: sticky;
     top: 0px;
     width: 100%;
-    background: transparent;
+    background: ${theme.colors.background02};
     z-index: ${theme.layers.alwaysOnTop};
     padding: ${theme.spacings.small} ${theme.spacings.medium};
 
@@ -34,51 +34,13 @@ export const Wrapper = styled.menu`
   `}
 `
 
-type MenuLinkProps = {
-  isActive: boolean
-}
-
-export const MenuLink = styled.a<MenuLinkProps>`
-  ${({ theme, isActive }) => css`
-    color: ${theme.colors.text02} !important;
-    font-size: ${theme.font.sizes.medium};
-    font-weight: ${theme.font.bold};
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
-    position: relative;
-
-    &::before {
-      content: '';
-      height: 2px;
-      background: ${isActive ? theme.colors.primary : 'none'};
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 100%;
-    }
-
-    &:not(:first-child) {
-      margin-left: ${theme.spacings.medium};
-    }
-  `}
-`
-
-export const MenuGroup = styled.div`
+export const MenuGroup = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1;
   ${media.greaterThan('tablet')`
       margin-right: 7rem;
-  `}
-
-  ${({ theme }) => css`
-    ${MenuLink} {
-      &:not(:first-child) {
-        margin-left: ${theme.spacings.medium};
-      }
-    }
   `}
 `
 
@@ -129,21 +91,15 @@ export const MenuFull = styled.nav<MenuFullProps>`
       flex: 1;
       flex-direction: column;
     }
-
-    ${MenuLink} {
-      color: ${theme.colors.text02};
-      font-weight: ${theme.font.bold};
-      font-size: ${theme.font.sizes.large};
-      margin-left: 0 !important;
-      margin-bottom: ${theme.spacings.small};
-      transform: ${isOpen ? 'translateY(0)' : 'translateY(3rem)'};
-      transition: transform 0.3s ease-in-out;
-    } ;
   `}
 `
 
 export const SelectWrapper = styled.div`
-  display: flex;
+  display: none;
   justify-content: center;
   margin: 6.4rem 1.6rem 0 1.6rem;
+
+  ${media.lessThan('tablet')`
+     display: flex;
+  `}
 `

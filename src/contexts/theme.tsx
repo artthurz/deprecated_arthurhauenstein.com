@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState, useMemo } from 'react'
 
 import { ThemeProvider as StyledTheme } from 'styled-components'
 import { DarkTheme, LightTheme } from '../styles/theme'
@@ -20,16 +20,16 @@ const ThemeContext = createContext<themeProps>({
 const ThemeProvider = ({ children }: themeProviderProps) => {
   const [theme, setTheme] = useState<themeProps['theme']>('dark')
 
+  const currentTheme = useMemo(() => {
+    return theme === 'dark' ? DarkTheme : LightTheme
+  }, [theme])
+
   const handleToggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
+    setTheme(prevState => (prevState === 'dark' ? 'light' : 'dark'))
   }
 
   const ApplyTheme = ({ children }: themeProviderProps) => {
-    return (
-      <StyledTheme theme={theme === 'dark' ? DarkTheme : LightTheme}>
-        {children}
-      </StyledTheme>
-    )
+    return <StyledTheme theme={currentTheme}>{children}</StyledTheme>
   }
 
   return (

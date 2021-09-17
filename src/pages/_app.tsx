@@ -6,7 +6,7 @@ import AOS from 'aos'
 import { ThemeProvider } from '@/contexts/theme'
 import * as S from '@/styles/pages/_app.styles'
 import GlobalStyles from '../styles/global'
-import { Menu } from '@/components/Menu'
+import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import I18NProvider from '@/i18n/context/I18NProvider'
 
@@ -38,7 +38,10 @@ function App({ Component, pageProps }: AppProps) {
           <link rel="apple-touch-icon" href="/img/icon.svg" />
           <link rel="manifest" href="/manifest.json" />
           <link rel="stylesheet" href="/css/aos.css" />
-          <link rel="stylesheet" href="/css/switch.css" />
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+          />
           <link
             rel="alternate"
             hrefLang="pt"
@@ -52,12 +55,10 @@ function App({ Component, pageProps }: AppProps) {
         </Head>
         <GlobalStyles />
         <S.Wrapper>
-          <Menu />
-          <S.Container>
-            <S.Main>
-              <Component {...pageProps} />
-            </S.Main>
-          </S.Container>
+          <Header />
+          <S.Main>
+            <Component {...pageProps} />
+          </S.Main>
           <Footer />
         </S.Wrapper>
       </ThemeProvider>

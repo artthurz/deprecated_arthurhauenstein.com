@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 import { Menu as MenuIcon } from '@styled-icons/material-outlined/Menu'
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 
-import * as S from './Menu.styles'
+import * as S from './Header.styles'
 import { Logo } from '@/components/Logo'
 import { MediaMatch } from '@/components/MediaMatch'
 import useI18N from '@/hooks/usei18n'
 import { Select } from '@/components/Select'
 import { Language, LanguageResource } from '@/i18n/language'
+import { MenuItem } from '@/components/MenuItem'
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -35,34 +35,34 @@ const Menu = () => {
     push(pathname, pathname, { locale: language })
   }
 
+  const MenuItems = () => (
+    <S.MenuGroup>
+      <MenuItem
+        href="/"
+        title={i18n.t('home')}
+        menuMobileIsOpen={isOpen}
+        key="home-link"
+      />
+      <MenuItem
+        href="/projects"
+        title={i18n.t('projects')}
+        menuMobileIsOpen={isOpen}
+        key="projects-link"
+      />
+      <MenuItem
+        href="/contact"
+        title={i18n.t('contact')}
+        menuMobileIsOpen={isOpen}
+        key="contact-link"
+      />
+    </S.MenuGroup>
+  )
+
   return (
     <S.Wrapper>
       <Logo hideOnMobile />
-
       <MediaMatch className="flex" greaterThan="tablet">
-        <S.MenuGroup>
-          <Link href="/">
-            <S.MenuLink isActive={pathname === '/'} data-testid="home-link">
-              {i18n.t('home')}
-            </S.MenuLink>
-          </Link>
-          <Link href="/projects">
-            <S.MenuLink
-              isActive={pathname === '/projects'}
-              data-testid="projects-link"
-            >
-              {i18n.t('projects')}
-            </S.MenuLink>
-          </Link>
-          <Link href="/contact">
-            <S.MenuLink
-              isActive={pathname === '/contact'}
-              data-testid="contact-link"
-            >
-              {i18n.t('contact')}
-            </S.MenuLink>
-          </Link>
-        </S.MenuGroup>
+        <MenuItems />
       </MediaMatch>
 
       <MediaMatch display="contents" greaterThan="tablet">
@@ -83,10 +83,10 @@ const Menu = () => {
         </S.IconWrapper>
       </MediaMatch>
 
-      <S.MenuFull data-testid="menu-full" aria-hidden={!isOpen} isOpen={isOpen}>
+      <S.MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
         <CloseIcon
           aria-label={i18n.t('close_menu')}
-          onClick={() => setIsOpen(false)}
+          onClick={() => closeMenu()}
         />
         <S.SelectWrapper>
           <Select
@@ -97,35 +97,7 @@ const Menu = () => {
           />
         </S.SelectWrapper>
 
-        <S.MenuGroup>
-          <Link href="/">
-            <S.MenuLink
-              isActive={pathname === '/'}
-              data-testid="home-link-mobile"
-              onClick={closeMenu}
-            >
-              {i18n.t('home')}
-            </S.MenuLink>
-          </Link>
-          <Link href="/projects">
-            <S.MenuLink
-              isActive={pathname === '/projects'}
-              data-testid="projects-link-mobile"
-              onClick={closeMenu}
-            >
-              {i18n.t('projects')}
-            </S.MenuLink>
-          </Link>
-          <Link href="/contact">
-            <S.MenuLink
-              isActive={pathname === '/contact'}
-              data-testid="contact-link-mobile"
-              onClick={closeMenu}
-            >
-              {i18n.t('contact')}
-            </S.MenuLink>
-          </Link>
-        </S.MenuGroup>
+        <MenuItems />
       </S.MenuFull>
     </S.Wrapper>
   )
