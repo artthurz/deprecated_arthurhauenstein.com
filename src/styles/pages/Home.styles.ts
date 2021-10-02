@@ -16,6 +16,9 @@ import DockerIconImport from '../../../public/img/technologies/docker.svg'
 import PostgreSQLIconImport from '../../../public/img/technologies/postgresql.svg'
 import HtmlIconImport from '../../../public/img/technologies/html.svg'
 import CssIconImport from '../../../public/img/technologies/css.svg'
+import NestImport from '../../../public/img/technologies/nest.svg'
+import GraphQlImport from '../../../public/img/technologies/graphql.svg'
+import NextImport from '../../../public/img/technologies/next.svg'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -496,6 +499,18 @@ export const HtmlIcon = styled(HtmlIconImport)`
   height: 90px;
 `
 export const CssIcon = styled(CssIconImport)`
+  width: 90px;
+  height: 90px;
+`
+export const NestIcon = styled(NestImport)`
+  width: 90px;
+  height: 90px;
+`
+export const GraphQlIcon = styled(GraphQlImport)`
+  width: 90px;
+  height: 90px;
+`
+export const NextIcon = styled(NextImport)`
   width: 90px;
   height: 90px;
 `

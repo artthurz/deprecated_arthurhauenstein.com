@@ -90,17 +90,26 @@ const achievements = (i18n: i18n): Achievement[] => [
 ]
 
 const technologies: React.ReactNode[] = [
+  <Card key="typescript" shadowColor="#01ADD7" title="TypeScript">
+    <S.TypescriptIcon alt="Typescript" />
+  </Card>,
   <Card key="react" shadowColor="#61D9FA" title="React">
     <S.ReactIcon alt="React" />
   </Card>,
-  <Card key="node" shadowColor="#408F3B" title="Node">
-    <S.NodeIcon alt="Node" />
+  <Card key="next" shadowColor="#eee" title="Next.js">
+    <S.NextIcon alt="Next" />
   </Card>,
   <Card key="reactnative" shadowColor="#9261FB" title="React Native">
     <S.ReactNativeIcon alt="React Native" />
   </Card>,
-  <Card key="typescript" shadowColor="#01ADD7" title="TypeScript">
-    <S.TypescriptIcon alt="Typescript" />
+  <Card key="node" shadowColor="#408F3B" title="Node">
+    <S.NodeIcon alt="Node" />
+  </Card>,
+  <Card key="nest" shadowColor="#E93333" title="NestJS">
+    <S.NestIcon alt="NestJS" />
+  </Card>,
+  <Card key="graphql" shadowColor="#DE33A6" title="GraphQL">
+    <S.GraphQlIcon alt="GraphQL" />
   </Card>,
   <Card key="html" shadowColor="#E44E28" title="HTML">
     <S.HtmlIcon alt="HTML" />
