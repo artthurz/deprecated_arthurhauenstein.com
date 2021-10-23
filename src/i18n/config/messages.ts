@@ -69,7 +69,7 @@ const messages: MessageFile = {
     about_me_history_2:
       'Tendo já uma resposta definida para o questionamento mais difícil que se pode fazer a um adolescente, ingressei em 2016, logo após o Ensino Médio, na Univates para buscar minha graduação em tecnologia e consequentemente conquistei meu primeiro emprego na área como Atendente de Suporte na Bebidas Fruki. ',
     about_me_history_3:
-      'Atualmente trabalho como Engenheiro Frontend para a Consultoria CBYK, alocado no Banco Crefisa de São Paulo/SP, atuando no squad de Canais Digitais desenvolvendo o Internet Banking em React e o aplicativo Crefisa Mais em React Native. Focado em projetos, já atuei desenvolvendo o PIX, Saque Digital e Push Notifications.',
+      'Atualmente trabalho como Engenheiro de Software para o banco BTG Pactual, o maior banco de investimentos da América Latina, atuo com o desenvolvimento Frontend em TypeScript e React.JS',
     arthur_front_alt: 'Minha foto olhando para a frente',
     in_construction: 'Esta página está em construção!',
     my_stack: 'Competências',
@@ -147,7 +147,7 @@ const messages: MessageFile = {
     about_me_history_2:
       'Having already a defined answer to the most difficult question that can be asked of a teenager, I joined in 2016, right after high school, at Univates to pursue my degree in technology and consequently got my first job in the field as a Support Attendant at Beverages Fruki.',
     about_me_history_3:
-      'I currently work as a Frontend Engineer for CBYK Consulting, allocated at Crefisa Bank of São Paulo/SP, working in the Digital Channels squad developing Internet Banking in React and the Crefisa Mais application in React Native. Focused on projects, I have worked on PIX, Digital Withdraw and Push Notifications.',
+      'Currently working as a Software Engineer for BTG Pactual bank, the largest investment bank in Latin America, I work with Frontend development in TypeScript and React.JS.',
     arthur_front_alt: 'My photo facing forward',
     in_construction: 'This page is under construction!',
     my_stack: 'Skills',
@@ -227,7 +227,7 @@ const messages: MessageFile = {
     about_me_history_2:
       'Teniendo ya una respuesta definida a la pregunta más difícil que se le puede hacer a un adolescente, me uní en 2016, justo después de la escuela secundaria, en Univates para obtener mi título en tecnología y, en consecuencia, obtuve mi primer trabajo en el campo como asistente de apoyo en Bebidas Fruki.',
     about_me_history_3:
-      'Actualmente trabajo como Ingeniero Frontend para CBYK Consulting, adscrito en Crefisa Bank de São Paulo / SP, trabajando en el equipo de Canales Digitales desarrollando Banca por Internet en React y la aplicación Crefisa Mais en React Native. Enfocado a proyectos, he trabajado en PIX, Digital Withdraw y Push Notifications.',
+      'Actualmente trabajo como ingeniero de software para BTG Pactual Bank, el banco de inversión más grande de América Latina, trabajo con el desarrollo de Frontend en TypeScript y React.JS.',
     arthur_front_alt: 'Mi foto mirando hacia adelante',
     in_construction: '¡Esta página esta en construcción!',
     my_stack: 'Habilidades',
