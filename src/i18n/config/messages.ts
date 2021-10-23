@@ -7,7 +7,7 @@ const messages: MessageFile = {
     contact: 'Contato',
     open_menu: 'Abrir menu',
     close_menu: 'Fechar menu',
-    fullstack: 'Desenvolvedor Web, Mobile e Backend',
+    fullstack: 'Engenheiro de Software',
     presentation: 'Olá, me chamo',
     presentation_description:
       'Nos últimos 5 anos, como desenvolvedor, trabalhei com grandes empresas para ajudá-las a alcançar todo o seu potencial e atrair novos clientes por meio da tecnologia.',
@@ -18,13 +18,16 @@ const messages: MessageFile = {
     not_found_message:
       'Opss, parece que a página que você tentou acessar não existe!',
     go_back_home: 'Voltar para home',
-    job_cbyk: 'Consultoria CBYK - Engenheiro Frontend',
-    job_cbyk_description:
-      'Estou alocado no Banco Crefisa, atuando no squad de Canais Digitais desenvolvendo o Internet Banking em React e o aplicativo Crefisa Mais em React Native. Focado em projetos, já atuei desenvolvendo o PIX, Saque Digital e Push Notifications',
-    job_bimachine: 'BIMachine - Engenheiro Fullstack',
+    job_btg: 'BTG Pactual - Engenheiro de Software',
+    job_btg_description:
+      'Engenharia e desenvolvimento de software no banco BTG Pactual com TypeScript e React',
+    job_crefisa: 'Banco Crefisa - Engenheiro de Software',
+    job_crefisa_description:
+      'Atuava no squad de Canais Digitais desenvolvendo o Internet Banking em React e o aplicativo Crefisa Mais em React Native. Focado em projetos, já atuei desenvolvendo o PIX, Saque Digital e Push Notifications',
+    job_bimachine: 'BIMachine - Engenheiro de Software',
     job_bimachine_description:
       'Atuei no produto principal da empresa, a plataforma de Inteligencia de Negócio. Desenvolvi features e solucionei bugs tanto na plataforma web com React quanto mobile com React Native. Já no backend era utilizado Java e Node.JS, onde realizava integrações via API Rest',
-    job_fruki: 'Bebidas Fruki - Analísta de Suporte a Software',
+    job_fruki: 'Bebidas Fruki - Analísta de Suporte de Software',
     job_fruki_description:
       'Inicio da minha vida profissional em TI, iniciei como Atendente de Suporte e durante os quease 5 anos que trabalhei na Fruki atingi diversos cargos. Tinha como principais atividades o desenvolvimento de sistemas em Progress e Android(Java), participação em projetos de TI e atualização e manutenção de sistemas',
     graduation_software_engineering:
@@ -34,27 +37,30 @@ const messages: MessageFile = {
     graduation_sad:
       'Troca de Graduação para Análise e Desenvolvimento de Sistemas - Univates',
     graduation_sad_description:
-      'Devido a pandemia do Covid19, num cenário onde as aulas presenciais estavam suspensas, decidi trocar meu Course de graduação para Análise e Desenvolvimento de Sistemas, assim podendo finaliza-lo totalmente na modalidade EAD',
+      'Devido a pandemia do Covid19, num cenário onde as aulas presenciais estavam suspensas, decidi trocar meu curso de graduação para Análise e Desenvolvimento de Sistemas, assim podendo finaliza-lo totalmente na modalidade EAD',
     graduation_sad_conclusion:
       'Formatura, Análise e Desenvolvimento de Sistemas - Univates',
     graduation_sad_conclusion_description:
       'Graduado em Análise e Desenvolvimento de Sistemas',
-    course_rocketseat_nextlevelweek: 'Course: "Next Level Week" - Rocketseat',
+    course_rocketseat_nextlevelweek: 'Curso: "Next Level Week" - Rocketseat',
     course_rocketseat_nextlevelweek_description:
       'Uma semana intensa com foco no aprendizado e desenvolvimento de uma aplicação em React.JS, React Native e Node.JS',
     course_rocketseat_bootcamp: 'Bootcamp: "GoStack" - Rocketseat',
     course_rocketseat_bootcamp_description:
       'Bootcamp intensivo de 6 meses com foco em React.JS, React Native e Node.JS do zero ao deploy. Incluindo testes automatizados, integração contínua, publicação nas stores, e todas as biliotecas e frameworks importantes',
-    course_rocketseat_ignite_react: 'Course: "Ignite React" - Rocketseat',
+    course_rocketseat_ignite_react: 'Curso: "Ignite React" - Rocketseat',
     course_rocketseat_ignite_react_description:
-      'Course completo de React.JS. Utilizado diversas ferramentas importantes como TypeScript, Next.JS, Styled Components, SASS, Context API, Hooks, Jest e diversas outras',
+      'Curso completo de React.JS. Utilizado diversas ferramentas importantes como TypeScript, Next.JS, Styled Components, SASS, Context API, Hooks, Jest e diversas outras',
     course_rocketseat_ignite_reactnative:
-      'Course: "Ignite React Native" - Rocketseat',
+      'Curso: "Ignite React Native" - Rocketseat',
     course_rocketseat_ignite_reactnative_description:
-      'Course completo de React Native. Utilizado diversas ferramentas importantes como TypeScript, Expo, Styled Components, Async Storage, Autenticação Social, Animações, Context API, Hooks, Jest e diversas outras',
-    course_rocketseat_ignite_node: 'Course: "Ignite Node" - Rocketseat',
+      'Curso completo de React Native. Utilizado diversas ferramentas importantes como TypeScript, Expo, Styled Components, Async Storage, Autenticação Social, Animações, Context API, Hooks, Jest e diversas outras',
+    course_rocketseat_ignite_node: 'Curso: "Ignite Node" - Rocketseat',
     course_rocketseat_ignite_node_description:
-      'Course completo de Node.JS. Utilizado diversas ferramentas importantes como TypeScript, Rest, SOLID, Docker, TypeORM, JWT, bcrypt, Jest e diversas outras',
+      'Curso completo de Node.JS. Utilizado diversas ferramentas importantes como TypeScript, Rest, SOLID, Docker, TypeORM, JWT, bcrypt, Jest e diversas outras',
+    course_nestjs: 'Curso: "NestJS" - Ariel Weinberger',
+    course_nestjs_description:
+      'Desenvolvimento moderno de backend em Typescript e NestJS',
     event_criexp: 'CRIExp',
     event_criexp_description:
       'Um dos maiores eventos do Sul do Brasil, com foco em criatividade, empreendedorismo, inovação e técnologia',
@@ -90,11 +96,13 @@ const messages: MessageFile = {
     not_found_message:
       "Oops, it looks like the page you tried to access doesn't exist!",
     go_back_home: 'Return to home',
-
-    job_cbyk: 'CBYK Consulting - Frontend Engineer',
-    job_cbyk_description:
-      'Im allocated at Banco Crefisa, working in the Digital Channels squad, developing Internet Banking in React and Crefisa Mais application in React Native. Focused on projects, I have worked developing PIX, Saque Digital and Push Notifications',
-    job_bimachine: 'BIMachine - Fullstack Engineer',
+    job_btg: 'BTG Pactual - Software Engineer',
+    job_btg_description:
+      'Software Engineering and Development on BTG Pactual bank, with Typescript and React',
+    job_crefisa: 'CBYK Consulting - Software Engineer',
+    job_crefisa_description:
+      'Worked in the Digital Channels squad, developing Internet Banking in React and Crefisa Mais application in React Native. Focused on projects, I have worked developing PIX, Saque Digital and Push Notifications',
+    job_bimachine: 'BIMachine - Software Engineer',
     job_bimachine_description:
       'I worked on the companys main product, the Business Intelligence platform. Developed features and fixed bugs both on the web platform with React and mobile with React Native. In the backend, Java and Node.JS were used, where it performed integrations via Rest API',
     job_fruki: 'Beverages Fruki - Software Support Analyst',
@@ -128,6 +136,9 @@ const messages: MessageFile = {
     course_rocketseat_ignite_node: 'Course: "Ignite Node" - Rocketseat',
     course_rocketseat_ignite_node_description:
       'Complete Node.JS course. Used several important tools such as TypeScript, Rest, SOLID, Docker, TypeORM, JWT, bcrypt, Jest and several others',
+    course_nestjs: 'Course: "NestJS" - Ariel Weinberger',
+    course_nestjs_description:
+      'Modern Typescript and NestJS backend development',
     event_criexp: 'CRIExp',
     event_criexp_description:
       'One of the biggest events in southern Brazil, focusing on creativity, entrepreneurship, innovation and technology',
@@ -165,11 +176,13 @@ const messages: MessageFile = {
     not_found_message:
       '¡Upss, parece que la página a la que intentó acceder no existe!',
     go_back_home: 'Volver a la home',
-
-    job_cbyk: 'CBYK Consulting - Ingeniero Frontend',
-    job_cbyk_description:
-      'Estoy adscrito al Banco Crefisa, trabajando en el equipo de Canales Digitales, desarrollando la Banca por Internet en React y la aplicación Crefisa Mais en React Native. Enfocado a proyectos, he trabajado desarrollando PIX, Saque Digital y Push Notifications',
-    job_bimachine: 'BIMachine - Ingeniero Fullstack',
+    job_btg: 'BTG Pactual - Ingeniero de Software',
+    job_btg_description:
+      'Ingeniería y desarrollo de software en el banco BTG Pactual, con Typecript y React',
+    job_crefisa: 'CBYK Consulting - Ingeniero de Software',
+    job_crefisa_description:
+      'Trabajé en el equipo de Canales Digitales, desarrollando la Banca por Internet en React y la aplicación Crefisa Mais en React Native. Enfocado a proyectos, he trabajado desarrollando PIX, Saque Digital y Push Notifications',
+    job_bimachine: 'BIMachine - Ingeniero de Software',
     job_bimachine_description:
       'Trabajé en el producto principal de la empresa, la plataforma Business Intelligence. Funciones desarrolladas y errores corregidos tanto en la plataforma web con React como en dispositivos móviles con React Native. En el backend se utilizó Java y Node.JS, donde realizó integraciones vía Rest API',
     job_fruki: 'Bebidas Fruki - Analista de soporte de software',
@@ -203,6 +216,9 @@ const messages: MessageFile = {
     course_rocketseat_ignite_node: 'Curso: "Ignite Node" - Rocketseat',
     course_rocketseat_ignite_node_description:
       'Curso completo de Node.JS. Usó varias herramientas importantes como TypeScript, Rest, SOLID, Docker, TypeORM, JWT, bcrypt, Jest y varias otras',
+    course_nestjs: 'Curso: "NestJS" - Ariel Weinberger',
+    course_nestjs_description:
+      'Desarrollo backend moderno de TypeScript y NestJS',
     event_criexp: 'CRIExp',
     event_criexp_description:
       'Uno de los eventos más importantes del sur de Brasil, centrado en la creatividad, el espíritu empresarial, la innovación y la tecnología.',

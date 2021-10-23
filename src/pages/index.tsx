@@ -15,6 +15,18 @@ import { i18n } from '@/i18n/protocols'
 
 const achievements = (i18n: i18n): Achievement[] => [
   {
+    date: new Date('2021-10-25T00:00:00'),
+    title: i18n.t('job_btg'),
+    description: i18n.t('job_btg_description'),
+    tag: 'professional'
+  },
+  {
+    date: new Date('2021-09-13T00:00:00'),
+    title: i18n.t('course_nestjs'),
+    description: i18n.t('course_nestjs_description'),
+    tag: 'education'
+  },
+  {
     date: new Date('2021-08-07T00:00:00'),
     title: i18n.t('graduation_sad_conclusion'),
     description: i18n.t('graduation_sad_conclusion_description'),
@@ -22,8 +34,8 @@ const achievements = (i18n: i18n): Achievement[] => [
   },
   {
     date: new Date('2021-04-19T00:00:00'),
-    title: i18n.t('job_cbyk'),
-    description: i18n.t('job_cbyk_description'),
+    title: i18n.t('job_crefisa'),
+    description: i18n.t('job_crefisa_description'),
     tag: 'professional'
   },
   {
