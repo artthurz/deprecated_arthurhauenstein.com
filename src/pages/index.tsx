@@ -120,9 +120,6 @@ const technologies: React.ReactNode[] = [
   <Card key="nest" shadowColor="#E93333" title="NestJS">
     <S.NestIcon alt="NestJS" />
   </Card>,
-  <Card key="graphql" shadowColor="#DE33A6" title="GraphQL">
-    <S.GraphQlIcon alt="GraphQL" />
-  </Card>,
   <Card key="html" shadowColor="#E44E28" title="HTML">
     <S.HtmlIcon alt="HTML" />
   </Card>,
@@ -285,4 +282,5 @@ const Home: NextPage = () => {
     </S.Wrapper>
   )
 }
+
 export default Home
