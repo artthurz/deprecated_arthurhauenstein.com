@@ -5,11 +5,11 @@ import { Mail as MailIcon } from '@styled-icons/feather/Mail'
 import { Linkedin as LinkedinIcon } from '@styled-icons/feather/Linkedin'
 import { Instagram as InstagramIcon } from '@styled-icons/feather/Instagram'
 
-import * as S from '@/styles/pages/Contact.styles'
-import * as Animations from '@/styles/animations'
-import { Heading } from '@/components/Heading'
-import { ContactCard } from '@/components/ContactCard'
-import useI18N from '@/hooks/usei18n'
+import * as S from 'styles/pages/Contact.styles'
+import * as Animations from 'styles/animations'
+import { Heading } from 'components/Heading'
+import { ContactCard } from 'components/ContactCard'
+import useI18N from 'hooks/usei18n'
 
 const Contact = () => {
   const i18n = useI18N()

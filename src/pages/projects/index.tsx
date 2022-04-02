@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import * as S from '@/styles/pages/Projects.styles'
-import LoadingEllipsis from '@/components/LoadingEllipsis'
-import useI18N from '@/hooks/usei18n'
+import * as S from 'styles/pages/Projects.styles'
+import LoadingEllipsis from 'components/LoadingEllipsis'
+import useI18N from 'hooks/usei18n'
 
 const Projects: NextPage = () => {
   const i18n = useI18N()

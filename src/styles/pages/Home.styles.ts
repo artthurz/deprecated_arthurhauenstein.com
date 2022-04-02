@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components'
 import media from '../media'
 
-import * as HighlightBoxStyles from '@/components/HighlightBox/HighlightBox.styles'
-import * as HeadingStyles from '@/components/Heading/Heading.styles'
-import * as MediaMatch from '@/components/MediaMatch/MediaMatch'
+import * as HighlightBoxStyles from 'components/HighlightBox/HighlightBox.styles'
+import * as HeadingStyles from 'components/Heading/Heading.styles'
+import * as MediaMatch from 'components/MediaMatch/MediaMatch'
 
 import { ArrowRightShort } from '@styled-icons/bootstrap/ArrowRightShort'
 import NotebookAndPhoneImageImport from '../../../public/img/homePage/notebook-phone.svg'
@@ -17,7 +17,6 @@ import PostgreSQLIconImport from '../../../public/img/technologies/postgresql.sv
 import HtmlIconImport from '../../../public/img/technologies/html.svg'
 import CssIconImport from '../../../public/img/technologies/css.svg'
 import NestImport from '../../../public/img/technologies/nest.svg'
-import GraphQlImport from '../../../public/img/technologies/graphql.svg'
 import NextImport from '../../../public/img/technologies/next.svg'
 
 export const Wrapper = styled.div`
@@ -503,10 +502,6 @@ export const CssIcon = styled(CssIconImport)`
   height: 90px;
 `
 export const NestIcon = styled(NestImport)`
-  width: 90px;
-  height: 90px;
-`
-export const GraphQlIcon = styled(GraphQlImport)`
   width: 90px;
   height: 90px;
 `

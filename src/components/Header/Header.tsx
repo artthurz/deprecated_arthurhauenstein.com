@@ -4,12 +4,12 @@ import { Menu as MenuIcon } from '@styled-icons/material-outlined/Menu'
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 
 import * as S from './Header.styles'
-import { Logo } from '@/components/Logo'
-import { MediaMatch } from '@/components/MediaMatch'
-import useI18N from '@/hooks/usei18n'
-import { Select } from '@/components/Select'
-import { Language, LanguageResource } from '@/i18n/language'
-import { NavItem } from '@/components/NavItem'
+import { Logo } from 'components/Logo'
+import { MediaMatch } from 'components/MediaMatch'
+import useI18N from 'hooks/usei18n'
+import { Select } from 'components/Select'
+import { Language, LanguageResource } from 'i18n/language'
+import { NavItem } from 'components/NavItem'
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false)

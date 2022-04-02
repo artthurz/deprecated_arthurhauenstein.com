@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
-import media from '@/styles/media'
+import media from 'styles/media'
 
-import MediaMatch from '@/components/MediaMatch/MediaMatch'
-import * as Select from '@/components/Select/Select.styles'
+import MediaMatch from 'components/MediaMatch/MediaMatch'
+import * as Select from 'components/Select/Select.styles'
 
 export const Wrapper = styled.header`
   ${({ theme }) => css`

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 
 import * as S from './Timeline.styles'
-import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect'
+import useIsomorphicLayoutEffect from 'hooks/useIsomorphicLayoutEffect'
 
 export type Tag = 'education' | 'event' | 'professional' | 'talk' | 'academic'
 

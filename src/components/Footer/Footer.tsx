@@ -3,7 +3,7 @@ import { Mail as MailIcon } from '@styled-icons/feather/Mail'
 import { Linkedin as LinkedinIcon } from '@styled-icons/feather/Linkedin'
 import { Github as GithubIcon } from '@styled-icons/feather/Github'
 
-import { Logo } from '@/components/Logo'
+import { Logo } from 'components/Logo'
 import * as S from './Footer.styles'
 
 const Footer = () => (

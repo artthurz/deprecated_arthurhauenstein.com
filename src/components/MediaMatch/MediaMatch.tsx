@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import media, { customBreakpoints } from '@/styles/media'
+import media, { customBreakpoints } from 'styles/media'
 
 export type DisplayType = 'block' | 'flex' | 'contents' | 'none'
 

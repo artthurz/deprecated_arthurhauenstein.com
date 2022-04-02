@@ -2,13 +2,13 @@ import { useEffect } from 'react'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import AOS from 'aos'
-
-import { ThemeProvider } from '@/contexts/theme'
-import * as S from '@/styles/pages/_app.styles'
+import '../../public/css/aos.css'
+import { ThemeProvider } from 'contexts/theme'
+import * as S from 'styles/pages/_app.styles'
 import GlobalStyles from '../styles/global'
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
-import I18NProvider from '@/i18n/context/I18NProvider'
+import { Header } from 'components/Header'
+import { Footer } from 'components/Footer'
+import I18NProvider from 'i18n/context/I18NProvider'
 
 function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -37,7 +37,6 @@ function App({ Component, pageProps }: AppProps) {
           <link rel="shortcut icon" href="/img/icon.svg" />
           <link rel="apple-touch-icon" href="/img/icon.svg" />
           <link rel="manifest" href="/manifest.json" />
-          <link rel="stylesheet" href="/css/aos.css" />
           <link
             rel="alternate"
             hrefLang="pt"

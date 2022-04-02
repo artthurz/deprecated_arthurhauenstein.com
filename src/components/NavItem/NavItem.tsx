@@ -14,7 +14,7 @@ const NavItem = (props: NavItemProps) => {
   const { href, title, menuMobileIsOpen } = props
 
   return (
-    <Link href={href}>
+    <Link href={href} passHref>
       <S.Link
         isActive={pathname === href}
         menuMobileIsOpen={menuMobileIsOpen}

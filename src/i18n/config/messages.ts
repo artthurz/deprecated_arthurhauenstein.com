@@ -1,4 +1,4 @@
-import { MessageFile } from '@/i18n/protocols'
+import { MessageFile } from 'i18n/protocols'
 
 const messages: MessageFile = {
   pt: {

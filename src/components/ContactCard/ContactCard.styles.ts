@@ -1,5 +1,5 @@
 import styled, { css, DefaultTheme } from 'styled-components'
-import media from '@/styles/media'
+import media from 'styles/media'
 import { transparentize } from 'polished'
 
 export const Wrapper = styled.div`

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import i18nContext from '@/contexts/i18n'
-import { makei18n } from '@/i18n/factories/i18n-factory'
+import i18nContext from 'contexts/i18n'
+import { makei18n } from 'i18n/factories/i18n-factory'
 
 type i18nProviderProps = {
   children: React.ReactNode

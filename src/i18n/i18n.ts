@@ -1,5 +1,5 @@
-import { Language } from '@/i18n/language'
-import { i18n, MessageFile } from '@/i18n/protocols'
+import { Language } from 'i18n/language'
+import { i18n, MessageFile } from 'i18n/protocols'
 
 export class I18N implements i18n {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

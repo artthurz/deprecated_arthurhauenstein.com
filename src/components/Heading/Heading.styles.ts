@@ -1,5 +1,5 @@
 import styled, { css, DefaultTheme } from 'styled-components'
-import media from '@/styles/media'
+import media from 'styles/media'
 
 import { HeadingProps } from '.'
 
@@ -28,7 +28,7 @@ export const Wrapper = styled.h2<WrapperProps>`
     font-weight: ${theme.font.bold};
     z-index: 3;
     line-height: 5.5rem;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.02em;
 
     ${!!size && wrapperModifiers[size](theme)};
   `}

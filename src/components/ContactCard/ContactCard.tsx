@@ -3,7 +3,7 @@ import { Copy as CopyIcon } from '@styled-icons/feather/Copy'
 import { ExternalLink as ExternalLinkIcon } from '@styled-icons/feather/ExternalLink'
 
 import * as S from './ContactCard.styles'
-import useI18N from '@/hooks/usei18n'
+import useI18N from 'hooks/usei18n'
 
 export type ContactCardProps = {
   socialMedia: string
