@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import media from '../../styles/media'
+import media from '../media'
 
 export const Wrapper = styled.section`
   position: relative;

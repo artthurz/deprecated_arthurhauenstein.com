@@ -6,7 +6,7 @@ import { Linkedin as LinkedinIcon } from '@styled-icons/feather/Linkedin'
 import { Instagram as InstagramIcon } from '@styled-icons/feather/Instagram'
 import { Whatsapp as WhatsAppIcon } from '@styled-icons/bootstrap/Whatsapp'
 
-import * as S from './styles'
+import * as S from 'styles/pages/Contact.styles'
 import * as Animations from 'styles/animations'
 import { Heading } from 'components/Heading'
 import ContactOption from 'components/ContactOption'
