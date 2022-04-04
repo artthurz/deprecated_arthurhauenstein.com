@@ -57,7 +57,12 @@ const ContactOption = ({
               title={i18n.t('copy_url', [socialMedia])}
             />
           </S.IconWrapper>
-          <S.IconWrapper as="a" href={fullLink} target="__blank">
+          <S.IconWrapper
+            as="a"
+            href={fullLink}
+            target="__blank"
+            style={{ marginLeft: 30 }}
+          >
             <ExternalLinkIcon
               aria-label={i18n.t('open_url', [socialMedia])}
               title={i18n.t('open_url', [socialMedia])}

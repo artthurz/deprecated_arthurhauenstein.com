@@ -81,11 +81,11 @@ export const BoxWrapper = styled.div`
     display: grid;
     grid-template-columns: 58% 30%;
     gap: 12%;
-    padding: ${theme.spacings.medium};
+    padding: ${theme.spacings.medium} 0;
 
     ${media.lessThan('tabletlarge')`
       grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: 5rem;
     `}
   `}
 `
