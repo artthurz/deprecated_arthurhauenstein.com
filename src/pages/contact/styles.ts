@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import media from '../media'
+import media from '../../styles/media'
 
 export const Wrapper = styled.section`
   position: relative;
@@ -8,6 +8,7 @@ export const Wrapper = styled.section`
   justify-content: center;
   min-height: calc(100vh - 100px - 80px);
   overflow: hidden;
+  width: 100%;
   ${({ theme }) => css`
     ${media.lessThan('tabletlarge')`
       min-height: 820px;
@@ -51,18 +52,16 @@ export const Wrapper = styled.section`
 
 export const Container = styled.div`
   ${({ theme }) => css`
-    margin: ${theme.spacings.small} 0;
-    display: grid;
-    grid-template-columns: 100%;
     max-width: ${theme.grid.container};
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: ${theme.spacings.medium} ${theme.spacings.medium}
+      ${theme.spacings.xxxlarge} ${theme.spacings.medium};
 
-    ${media.lessThan('hd')`
-      grid-template-rows: auto auto auto;
-    `}
-
-    ${media.lessThan('tabletlarge')`
-      margin: ${theme.spacings.small} 0;
-    `}
+    ${media.lessThan('tablet')`
+      padding: ${theme.spacings.xsmall} ${theme.spacings.xsmall} ${theme.spacings.xxxlarge} ${theme.spacings.xsmall};
+    `};
   `}
 `
 
@@ -78,12 +77,15 @@ export const Subtitle = styled.h4`
 
 export const BoxWrapper = styled.div`
   ${({ theme }) => css`
-    display: flex;
-    align-items: center;
-    margin: ${theme.spacings.small} 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 58% 30%;
+    gap: 12%;
+    padding: ${theme.spacings.medium};
 
-    ${media.lessThan('hd')`
-      justify-content: center;
+    ${media.lessThan('tabletlarge')`
+      grid-template-columns: 1fr;
+      gap: 2rem;
     `}
   `}
 `
@@ -92,26 +94,10 @@ export const ContactBox = styled.div`
   ${({ theme }) => css`
     background: transparent;
     flex: 1;
-    height: 40rem;
-    max-height: 53rem;
-    min-width: 100rem;
+    width: 100%;
     z-index: ${theme.layers.overlay};
     display: grid;
-    grid-template-columns: 50% 50%;
-    padding: ${theme.spacings.medium};
-
-    align-items: center;
-    justify-items: center;
-
-    ${media.lessThan('tabletlarge')`
-      gap: ${theme.spacings.xsmall};
-      grid-template-columns: 1fr;
-      height: 100%;
-      min-width: unset;
-    `}
-
-    @media (max-width: 280px) {
-      width: 10rem;
-    }
+    grid-template-columns: 1fr;
+    grid-gap: ${theme.spacings.small};
   `}
 `

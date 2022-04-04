@@ -78,7 +78,14 @@ const messages: MessageFile = {
     contact_me: `Entre em contato comigo`,
     contact_me_description: `Estas são as minhas principais redes sociais, não hesite em iniciar uma conversa!`,
     contact_me_image_alt: 'Eu na biblioteca da Univates prestes a me formar',
-    copy_to_clipboard: 'Copiado'
+    copy_to_clipboard: 'Copiado',
+    name_input: 'Seu nome completo',
+    email_input: 'Seu email',
+    message_input: 'Sua mensagem',
+    send_message: 'Enviar mensagem',
+    send_email_success: 'Email enviado com sucesso!',
+    send_email_error:
+      'Ops, ocorreu um problema ao enviar a mensagem, fique a vontade em me contatar de outra forma!'
   },
   en: {
     home: 'Home',
@@ -157,7 +164,14 @@ const messages: MessageFile = {
     contact_me_description:
       "These are my main social networks, don't hesitate to start a conversation!",
     contact_me_image_alt: 'Me in the Univates library about to graduate',
-    copy_to_clipboard: 'Copied to clipboard'
+    copy_to_clipboard: 'Copied to clipboard',
+    name_input: 'Your full name',
+    email_input: 'Your email',
+    message_input: 'Your message',
+    send_message: 'Send mensagem',
+    send_email_success: 'Email successfully sent!',
+    send_email_error:
+      'Oops, there was a problem sending the message, feel free to contact me in another way!'
   },
   es: {
     home: 'Home',
@@ -238,7 +252,14 @@ const messages: MessageFile = {
       'Estas son mis principales redes sociales, no dudes en iniciar una conversación!',
     contact_me_image_alt:
       'Yo en la biblioteca de Univates a punto de graduarme',
-    copy_to_clipboard: 'Copiado'
+    copy_to_clipboard: 'Copiado',
+    name_input: 'Su nombre completo',
+    email_input: 'Su e-mail',
+    message_input: 'Su mensaje',
+    send_message: 'Mandar mensaje',
+    send_email_success: '¡Email enviado con éxito!',
+    send_email_error:
+      'Oops, hubo un problema al enviar el mensaje, ¡no dudes en contactarme de otra manera!'
   }
 } as const
 

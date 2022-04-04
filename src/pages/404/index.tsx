@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import * as S from 'styles/pages/NotFound.styles'
+import * as S from 'pages/404/styles'
 import { Button } from 'components/Button'
 import { useRouter } from 'next/router'
 import useI18N from 'hooks/usei18n'

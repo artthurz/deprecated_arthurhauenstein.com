@@ -2,23 +2,22 @@ import React, { useState } from 'react'
 import { Copy as CopyIcon } from '@styled-icons/feather/Copy'
 import { ExternalLink as ExternalLinkIcon } from '@styled-icons/feather/ExternalLink'
 
-import * as S from './ContactCard.styles'
+import * as S from './styles'
 import useI18N from 'hooks/usei18n'
 
-export type ContactCardProps = {
+export type ContactOptionProps = {
   socialMedia: string
   icon: React.ReactNode
   previewLink: string
   fullLink: string
 }
 
-const ContactCard = ({
+const ContactOption = ({
   socialMedia,
   icon,
   previewLink,
   fullLink
-}: ContactCardProps) => {
-  const [open, setOpen] = useState(false)
+}: ContactOptionProps) => {
   const [timeoutID, setTimeoutID] = useState<number>()
   const [isCopyClicked, setCopyClicked] = useState(false)
   const i18n = useI18N()
@@ -41,16 +40,12 @@ const ContactCard = ({
   }
 
   return (
-    <S.Wrapper
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
-    >
+    <S.Wrapper>
       <S.ContentWrapper>
-        <S.IconWrapper>{icon}</S.IconWrapper>
+        <S.IconWrapper mainIcon>{icon}</S.IconWrapper>
+        <S.OptionTitle>{socialMedia}</S.OptionTitle>
         <S.PreviewLink>{previewLink}</S.PreviewLink>
-      </S.ContentWrapper>
-      <S.Overlay data-testid="overlay" aria-hidden={open ? 'false' : 'true'}>
-        <S.ContentWrapper>
+        <S.ActionWrapper>
           <S.IconWrapper
             className="pointer"
             onClick={copyToClipboard}
@@ -68,10 +63,10 @@ const ContactCard = ({
               title={i18n.t('open_url', [socialMedia])}
             />
           </S.IconWrapper>
-        </S.ContentWrapper>
-      </S.Overlay>
+        </S.ActionWrapper>
+      </S.ContentWrapper>
     </S.Wrapper>
   )
 }
 
-export default ContactCard
+export default ContactOption

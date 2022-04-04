@@ -250,16 +250,13 @@ export const AboutMeSectionDelimiter = styled.div`
   ${({ theme }) => css`
     max-width: ${theme.grid.container};
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: 'aboutMe aboutMe';
-    grid-template-rows: auto auto;
+    grid-template-areas: 'aboutMe';
+    grid-template-columns: 1fr;
     padding: ${theme.spacings.medium} ${theme.spacings.medium}
       ${theme.spacings.xxxlarge} ${theme.spacings.medium};
 
     ${media.lessThan('tablet')`
       padding: ${theme.spacings.xsmall} ${theme.spacings.xsmall} ${theme.spacings.xxxlarge} ${theme.spacings.xsmall};
-      grid-template-areas: "aboutMe";
-      grid-template-columns: 1fr;
     `};
   `}
 `
