@@ -164,7 +164,7 @@ const Home: NextPage = () => {
 
           <S.HighlightGroup data-aos="fade-up" {...Animations.baseAosAnimation}>
             <HighlightBox
-              primaryText="+5"
+              primaryText="+6"
               secondaryText={i18n.t('years_experience')}
             />
             <HighlightBox
