@@ -21,7 +21,7 @@ const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
         transition: 'box-shadow 0.3s, transform 0.3s'
       })
       setChildrenPerspective({
-        transform: `translate3d(0, 0, 0)`
+        transform: 'translate3d(0, 0, 0)'
       })
       setHighlightPerspective({
         transform: 'translate3d(0px, 0px, 0px)',
@@ -95,7 +95,7 @@ const Card = ({ children, shadowColor, title, ...props }: CardProps) => {
 
   return (
     <S.Wrapper style={cardPerspective} {...props}>
-      <S.CardOverlay ref={wrapperRef}></S.CardOverlay>
+      <S.CardOverlay ref={wrapperRef} />
       <div style={childrenPerspective}>{children}</div>
       <h1 style={{ marginLeft: '10px' }}>{title}</h1>
       <S.Highlight style={highlightPerspective} />
