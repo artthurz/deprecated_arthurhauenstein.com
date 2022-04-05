@@ -13,7 +13,7 @@ const Projects: NextPage = () => {
         <title>{i18n.t('projects')} | Arthur Hauenstein</title>
       </Head>
       <LoadingEllipsis />
-      <h1>{i18n.t('in_construction')} 👷‍♂️</h1>
+      <h1>{i18n.t('in_construction')} 🚧</h1>
     </S.Wrapper>
   )
 }
